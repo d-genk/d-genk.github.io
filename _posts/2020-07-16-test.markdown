@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Hello world!"
-date:   2020-07-16 17:08:11 -0500
-categories: test
----
-I wish I could write blog posts in the future.
