@@ -14,13 +14,14 @@ author: Daniel Genkins
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Home: "/"
+  #Home: "/"
+  CV: "https://drive.google.com/file/d/1wWzLzUbbrvZtG4Eod-nvGdT8cLt7_CoQ/view?usp=sharing"
+  SSDA: "https://www.slavesocieties.org/"
+
   #Resources:
     #- Getting started: "getstarted"
     #- Featured users: "https://github.com/daattali/beautiful-jekyll#showcased-users-success-stories"
     #- Project page: "https://github.com/daattali/beautiful-jekyll#readme"
-  #About me: "http://deanattali.com"
-  #Support me: "http://deanattali.com/aboutme/#feed-meeee"
 
 # --- Logo --- #
 
@@ -194,15 +195,9 @@ defaults:
 
 # Exclude these files from production site
 exclude:
-  - CHANGELOG.md
-  - CNAME
-  - Dockerfile
   - Gemfile
   - Gemfile.lock
-  - LICENSE
-  - README.md
-  - Vagrantfile
-  - docs/
+  - README.md  
 
 plugins:
   - jekyll-paginate
