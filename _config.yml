@@ -17,6 +17,7 @@ navbar-links:
   #Home: "/"
   CV: "https://drive.google.com/file/d/1wWzLzUbbrvZtG4Eod-nvGdT8cLt7_CoQ/view?usp=sharing"
   SSDA: "https://www.slavesocieties.org/"
+  Presentations: "presentations"
 
   #Resources:
     #- Getting started: "getstarted"
@@ -197,7 +198,7 @@ defaults:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - README.md  
+  - README.md
 
 plugins:
   - jekyll-paginate
