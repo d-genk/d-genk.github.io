@@ -93,6 +93,33 @@
               }
             }
           ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0f1ed064-a972-4215-b884-d8d658acefc5.json",
+          "@type": "sc:Canvas",
+          "label": "fourth image",
+          "width": 3648,
+          "height": 2736,
+          "images": [
+            {
+              "@id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/0f1ed064-a972-4215-b884-d8d658acefc5.json",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0f1ed064-a972-4215-b884-d8d658acefc5.json",
+              "resource": {
+                "@id": "http://localhost:8182/iiif/2/1004/0,0,3648,2736/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 3648,
+                "height": 2736,
+                "service": {
+                  "@id": "http://localhost:8182/iiif/2/1004",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              }
+            }
+          ]
         }
       ]
     }
