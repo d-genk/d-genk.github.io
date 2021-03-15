@@ -1,6 +1,6 @@
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
-  "@id": "https://ssda-web-content.s3.amazonaws.com/test_manifest.json",
+  "@id": "https://danielgenkins.com/test_manifest.json",
   "@type": "sc:Manifest",
   "label": "SSDA test manifest",
   "description": "this is a description",
