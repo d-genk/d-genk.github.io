@@ -3,6 +3,7 @@
   "@id": "https://danielgenkins.com/test_manifest.json",
   "@type": "sc:Manifest",
   "label": "SSDA test manifest",
+  "logo": "https://danielgenkins.com/ssda_logo.jpg",
   "description": "this is a description",
   "attribution": "DG",
   "viewingHint": "paged",
