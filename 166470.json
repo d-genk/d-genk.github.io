@@ -1,7 +1,7 @@
 {
 "@context": "http://iiif.io/api/presentation/2/context.json",
 "@type": "sc:Manifest",
-"@id": "https://danielgenkins.com/manifest/166470.json",
+"@id": "https://danielgenkins.com/166470.json",
 "label": "Libro 3 de Bautismos de Pardos y Morenos, 1839 - 1843",
 "attribution": "Slave Societies Digital Archive",
 "logo": "https://danielgenkins.com/ssda_logo.jpg",
