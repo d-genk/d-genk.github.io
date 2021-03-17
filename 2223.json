@@ -1,7 +1,7 @@
 {
 "@context": "http://iiif.io/api/presentation/2/context.json",
 "@type": "sc:Manifest",
-"@id": "https://danielgenkins.com/manifest/2223.json",
+"@id": "https://danielgenkins.com/2223.json",
 "label": "Test Volume",
 "attribution": "Slave Societies Digital Archive",
 "logo": "https://danielgenkins.com/ssda_logo.jpg",
