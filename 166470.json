@@ -23,11 +23,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1001.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1001.JPG/full/2736,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1001.JPG/full/2736,/0/default.jpg",
 "width": 2736,
 "height": 3648,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1001.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1001.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -48,11 +48,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1002.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1002.JPG/full/2736,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1002.JPG/full/2736,/0/default.jpg",
 "width": 2736,
 "height": 3648,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1002.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1002.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -73,11 +73,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1003.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1003.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1003.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1003.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1003.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -98,11 +98,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1004.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1004.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1004.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1004.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1004.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -123,11 +123,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1005.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1005.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1005.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1005.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1005.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -148,11 +148,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1006.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1006.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1006.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1006.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1006.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -173,11 +173,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1007.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1007.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1007.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1007.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1007.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -198,11 +198,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1008.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1008.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1008.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1008.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1008.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -223,11 +223,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1009.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1009.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1009.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1009.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1009.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -248,11 +248,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1010.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1010.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1010.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1010.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1010.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -273,11 +273,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1011.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1011.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1011.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1011.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1011.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -298,11 +298,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1012.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1012.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1012.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1012.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1012.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -323,11 +323,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1013.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1013.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1013.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1013.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1013.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -348,11 +348,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1014.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1014.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1014.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1014.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1014.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -373,11 +373,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1015.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1015.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1015.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1015.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1015.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -398,11 +398,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1016.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1016.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1016.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1016.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1016.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -423,11 +423,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1017.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1017.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1017.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1017.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1017.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -448,11 +448,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1018.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1018.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1018.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1018.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1018.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -473,11 +473,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1019.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1019.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1019.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1019.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1019.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -498,11 +498,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1020.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1020.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1020.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1020.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1020.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -523,11 +523,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1021.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1021.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1021.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1021.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1021.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -548,11 +548,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1022.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1022.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1022.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1022.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1022.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -573,11 +573,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1023.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1023.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1023.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1023.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1023.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -598,11 +598,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1024.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1024.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1024.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1024.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1024.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -623,11 +623,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1025.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1025.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1025.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1025.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1025.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -648,11 +648,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1026.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1026.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1026.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1026.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1026.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -673,11 +673,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1027.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1027.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1027.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1027.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1027.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -698,11 +698,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1028.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1028.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1028.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1028.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1028.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -723,11 +723,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1029.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1029.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1029.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1029.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1029.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -748,11 +748,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1030.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1030.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1030.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1030.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1030.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -773,11 +773,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1031.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1031.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1031.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1031.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1031.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -798,11 +798,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1032.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1032.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1032.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1032.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1032.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -823,11 +823,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1033.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1033.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1033.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1033.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1033.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -848,11 +848,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1034.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1034.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1034.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1034.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1034.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -873,11 +873,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1035.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1035.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1035.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1035.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1035.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -898,11 +898,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1036.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1036.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1036.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1036.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1036.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -923,11 +923,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1037.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1037.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1037.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1037.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1037.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -948,11 +948,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1038.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1038.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1038.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1038.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1038.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -973,11 +973,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1039.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1039.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1039.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1039.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1039.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -998,11 +998,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1040.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1040.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1040.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1040.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1040.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1023,11 +1023,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1041.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1041.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1041.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1041.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1041.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1048,11 +1048,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1042.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1042.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1042.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1042.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1042.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1073,11 +1073,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1043.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1043.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1043.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1043.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1043.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1098,11 +1098,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1044.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1044.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1044.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1044.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1044.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1123,11 +1123,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1045.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1045.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1045.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1045.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1045.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1148,11 +1148,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1046.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1046.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1046.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1046.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1046.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1173,11 +1173,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1047.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1047.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1047.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1047.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1047.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1198,11 +1198,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1048.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1048.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1048.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1048.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1048.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1223,11 +1223,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1049.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1049.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1049.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1049.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1049.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1248,11 +1248,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1050.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1050.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1050.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1050.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1050.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1273,11 +1273,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1051.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1051.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1051.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1051.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1051.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1298,11 +1298,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1052.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1052.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1052.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1052.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1052.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1323,11 +1323,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1053.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1053.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1053.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1053.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1053.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1348,11 +1348,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1054.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1054.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1054.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1054.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1054.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1373,11 +1373,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1055.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1055.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1055.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1055.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1055.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1398,11 +1398,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1056.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1056.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1056.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1056.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1056.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1423,11 +1423,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1057.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1057.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1057.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1057.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1057.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1448,11 +1448,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1058.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1058.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1058.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1058.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1058.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1473,11 +1473,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1059.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1059.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1059.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1059.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1059.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1498,11 +1498,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1060.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1060.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1060.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1060.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1060.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1523,11 +1523,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1061.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1061.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1061.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1061.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1061.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1548,11 +1548,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1062.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1062.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1062.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1062.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1062.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1573,11 +1573,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1063.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1063.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1063.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1063.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1063.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1598,11 +1598,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1064.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1064.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1064.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1064.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1064.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1623,11 +1623,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1065.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1065.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1065.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1065.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1065.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1648,11 +1648,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1066.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1066.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1066.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1066.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1066.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1673,11 +1673,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1067.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1067.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1067.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1067.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1067.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1698,11 +1698,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1068.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1068.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1068.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1068.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1068.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1723,11 +1723,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1069.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1069.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1069.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1069.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1069.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1748,11 +1748,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1070.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1070.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1070.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1070.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1070.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1773,11 +1773,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1071.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1071.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1071.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1071.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1071.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1798,11 +1798,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1072.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1072.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1072.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1072.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1072.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1823,11 +1823,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1073.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1073.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1073.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1073.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1073.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1848,11 +1848,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1074.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1074.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1074.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1074.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1074.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1873,11 +1873,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1075.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1075.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1075.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1075.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1075.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1898,11 +1898,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1076.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1076.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1076.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1076.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1076.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1923,11 +1923,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1077.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1077.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1077.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1077.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1077.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1948,11 +1948,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1078.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1078.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1078.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1078.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1078.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1973,11 +1973,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1079.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1079.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1079.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1079.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1079.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -1998,11 +1998,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1080.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1080.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1080.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1080.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1080.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2023,11 +2023,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1081.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1081.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1081.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1081.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1081.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2048,11 +2048,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1082.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1082.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1082.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1082.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1082.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2073,11 +2073,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1083.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1083.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1083.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1083.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1083.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2098,11 +2098,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1084.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1084.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1084.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1084.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1084.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2123,11 +2123,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1085.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1085.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1085.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1085.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1085.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2148,11 +2148,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1086.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1086.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1086.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1086.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1086.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2173,11 +2173,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1087.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1087.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1087.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1087.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1087.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2198,11 +2198,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1088.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1088.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1088.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1088.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1088.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2223,11 +2223,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1089.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1089.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1089.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1089.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1089.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2248,11 +2248,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1090.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1090.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1090.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1090.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1090.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2273,11 +2273,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1091.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1091.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1091.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1091.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1091.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2298,11 +2298,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1092.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1092.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1092.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1092.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1092.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2323,11 +2323,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1093.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1093.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1093.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1093.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1093.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2348,11 +2348,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1094.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1094.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1094.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1094.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1094.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2373,11 +2373,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1095.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1095.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1095.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1095.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1095.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2398,11 +2398,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1096.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1096.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1096.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1096.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1096.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2423,11 +2423,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1097.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1097.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1097.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1097.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1097.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2448,11 +2448,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1098.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1098.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1098.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1098.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1098.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2473,11 +2473,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1099.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1099.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1099.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1099.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1099.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2498,11 +2498,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1100.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1100.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1100.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1100.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1100.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2523,11 +2523,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1101.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1101.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1101.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1101.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1101.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2548,11 +2548,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1102.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1102.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1102.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1102.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1102.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2573,11 +2573,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1103.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1103.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1103.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1103.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1103.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2598,11 +2598,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1104.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1104.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1104.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1104.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1104.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2623,11 +2623,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1105.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1105.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1105.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1105.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1105.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2648,11 +2648,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1106.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1106.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1106.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1106.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1106.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2673,11 +2673,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1107.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1107.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1107.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1107.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1107.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2698,11 +2698,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1108.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1108.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1108.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1108.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1108.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2723,11 +2723,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1109.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1109.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1109.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1109.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1109.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2748,11 +2748,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1110.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1110.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1110.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1110.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1110.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2773,11 +2773,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1111.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1111.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1111.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1111.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1111.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2798,11 +2798,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1112.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1112.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1112.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1112.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1112.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2823,11 +2823,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1113.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1113.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1113.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1113.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1113.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2848,11 +2848,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1114.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1114.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1114.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1114.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1114.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2873,11 +2873,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1115.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1115.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1115.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1115.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1115.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2898,11 +2898,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1116.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1116.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1116.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1116.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1116.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2923,11 +2923,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1117.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1117.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1117.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1117.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1117.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2948,11 +2948,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1118.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1118.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1118.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1118.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1118.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2973,11 +2973,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1119.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1119.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1119.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1119.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1119.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -2998,11 +2998,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1120.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1120.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1120.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1120.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1120.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3023,11 +3023,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1121.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1121.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1121.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1121.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1121.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3048,11 +3048,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1122.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1122.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1122.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1122.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1122.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3073,11 +3073,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1123.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1123.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1123.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1123.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1123.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3098,11 +3098,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1124.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1124.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1124.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1124.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1124.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3123,11 +3123,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1125.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1125.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1125.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1125.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1125.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3148,11 +3148,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1126.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1126.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1126.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1126.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1126.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3173,11 +3173,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1127.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1127.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1127.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1127.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1127.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3198,11 +3198,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1128.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1128.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1128.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1128.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1128.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3223,11 +3223,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1129.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1129.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1129.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1129.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1129.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3248,11 +3248,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1130.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1130.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1130.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1130.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1130.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3273,11 +3273,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1131.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1131.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1131.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1131.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1131.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3298,11 +3298,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1132.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1132.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1132.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1132.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1132.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3323,11 +3323,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1133.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1133.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1133.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1133.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1133.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3348,11 +3348,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1134.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1134.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1134.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1134.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1134.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3373,11 +3373,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1135.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1135.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1135.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1135.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1135.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3398,11 +3398,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1136.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1136.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1136.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1136.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1136.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3423,11 +3423,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1137.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1137.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1137.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1137.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1137.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3448,11 +3448,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1138.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1138.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1138.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1138.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1138.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3473,11 +3473,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1139.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1139.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1139.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1139.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1139.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3498,11 +3498,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1140.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1140.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1140.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1140.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1140.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3523,11 +3523,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1141.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1141.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1141.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1141.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1141.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3548,11 +3548,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1142.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1142.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1142.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1142.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1142.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
@@ -3573,11 +3573,11 @@
 "on": "https://danielgenkins.com/canvas/166470-1143.json",
 "resource": {
 "@type": "dctypes:Image",
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1143.JPG/full/3648,/0/default.jpg",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1143.JPG/full/3648,/0/default.jpg",
 "width": 3648,
 "height": 2736,
 "service": {
-"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Señora_de_la_Purísima_Concepción%2F166470%2FJPG%2F1143.JPG",
+"@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_SeÃ±ora_de_la_PurÃ­sima_ConcepciÃ³n%2F166470%2FJPG%2F1143.JPG",
 "@context": "http://iiif.io/api/image/2/context.json",
 "profile": "http://iiif.io/api/image/2/level2.json"
 }
