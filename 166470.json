@@ -23,7 +23,7 @@
               "on": "https://danielgenkins.com/canvas/166470-1001.json",
               "resource": {
                 "@type": "dctypes:Image",
-                "@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Se%F1ora_de_la_Pur%EDsima_Concepci%F3n%2F166470%2FJPG%2F1001.JPG/full/2736,/0/default.jpg",
+                "@id": "http://localhost:8182/iiif/2/Cuba%2FCienfuegos%2FCienfuegos%2FCatedral_de_Nuestra_Se%C3%B1ora_de_la_Pur%C3%ADsima_Concepci%C3%B3n%2F166470%2FJPG%2F1001/full/2736,/0/default.jpg",
                 "width": 2736,
                 "height": 3648,
                 "service": {
