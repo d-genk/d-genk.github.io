@@ -20,6 +20,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0001.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0001.json",
               "resource": {
@@ -46,6 +47,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0002.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0002.json",
               "resource": {
@@ -72,6 +74,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0003.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0003.json",
               "resource": {
@@ -98,6 +101,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0004.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0004.json",
               "resource": {
@@ -124,6 +128,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0005.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0005.json",
               "resource": {
@@ -150,6 +155,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0006.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0006.json",
               "resource": {
@@ -176,6 +182,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0007.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0007.json",
               "resource": {
@@ -202,6 +209,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0008.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0008.json",
               "resource": {
@@ -228,6 +236,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0009.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0009.json",
               "resource": {
@@ -254,6 +263,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0010.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0010.json",
               "resource": {
@@ -280,6 +290,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0011.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0011.json",
               "resource": {
@@ -306,6 +317,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0012.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0012.json",
               "resource": {
@@ -332,6 +344,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0013.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0013.json",
               "resource": {
@@ -358,6 +371,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0014.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0014.json",
               "resource": {
@@ -384,6 +398,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0015.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0015.json",
               "resource": {
@@ -410,6 +425,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0016.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0016.json",
               "resource": {
@@ -436,6 +452,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0017.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0017.json",
               "resource": {
@@ -462,6 +479,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0018.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0018.json",
               "resource": {
@@ -488,6 +506,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0019.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0019.json",
               "resource": {
@@ -514,6 +533,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0020.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0020.json",
               "resource": {
@@ -540,6 +560,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0021.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0021.json",
               "resource": {
@@ -566,6 +587,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0022.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0022.json",
               "resource": {
@@ -592,6 +614,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0023.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0023.json",
               "resource": {
@@ -618,6 +641,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0024.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0024.json",
               "resource": {
@@ -644,6 +668,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0025.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0025.json",
               "resource": {
@@ -670,6 +695,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0026.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0026.json",
               "resource": {
@@ -696,6 +722,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0027.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0027.json",
               "resource": {
@@ -722,6 +749,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0028.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0028.json",
               "resource": {
@@ -748,6 +776,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0029.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0029.json",
               "resource": {
@@ -774,6 +803,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0030.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0030.json",
               "resource": {
@@ -800,6 +830,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0031.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0031.json",
               "resource": {
@@ -826,6 +857,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0032.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0032.json",
               "resource": {
@@ -852,6 +884,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0033.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0033.json",
               "resource": {
@@ -878,6 +911,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0034.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0034.json",
               "resource": {
@@ -904,6 +938,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0035.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0035.json",
               "resource": {
@@ -930,6 +965,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0036.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0036.json",
               "resource": {
@@ -956,6 +992,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0037.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0037.json",
               "resource": {
@@ -982,6 +1019,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0038.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0038.json",
               "resource": {
@@ -1008,6 +1046,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0039.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0039.json",
               "resource": {
@@ -1034,6 +1073,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0040.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0040.json",
               "resource": {
@@ -1060,6 +1100,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0041.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0041.json",
               "resource": {
@@ -1086,6 +1127,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0042.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0042.json",
               "resource": {
@@ -1112,6 +1154,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0043.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0043.json",
               "resource": {
@@ -1138,6 +1181,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0044.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0044.json",
               "resource": {
@@ -1164,6 +1208,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0045.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0045.json",
               "resource": {
@@ -1190,6 +1235,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0046.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0046.json",
               "resource": {
@@ -1216,6 +1262,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0047.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0047.json",
               "resource": {
@@ -1242,6 +1289,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0048.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0048.json",
               "resource": {
@@ -1268,6 +1316,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0049.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0049.json",
               "resource": {
@@ -1294,6 +1343,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0050.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0050.json",
               "resource": {
@@ -1320,6 +1370,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0051.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0051.json",
               "resource": {
@@ -1346,6 +1397,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0052.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0052.json",
               "resource": {
@@ -1372,6 +1424,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0053.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0053.json",
               "resource": {
@@ -1398,6 +1451,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0054.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0054.json",
               "resource": {
@@ -1424,6 +1478,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0055.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0055.json",
               "resource": {
@@ -1450,6 +1505,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0056.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0056.json",
               "resource": {
@@ -1476,6 +1532,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0057.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0057.json",
               "resource": {
@@ -1502,6 +1559,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0058.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0058.json",
               "resource": {
@@ -1528,6 +1586,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0059.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0059.json",
               "resource": {
@@ -1554,6 +1613,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0060.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0060.json",
               "resource": {
@@ -1580,6 +1640,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0061.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0061.json",
               "resource": {
@@ -1606,6 +1667,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0062.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0062.json",
               "resource": {
@@ -1632,6 +1694,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0063.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0063.json",
               "resource": {
@@ -1658,6 +1721,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0064.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0064.json",
               "resource": {
@@ -1684,6 +1748,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0065.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0065.json",
               "resource": {
@@ -1710,6 +1775,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0066.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0066.json",
               "resource": {
@@ -1736,6 +1802,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0067.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0067.json",
               "resource": {
@@ -1762,6 +1829,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0068.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0068.json",
               "resource": {
@@ -1788,6 +1856,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0069.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0069.json",
               "resource": {
@@ -1814,6 +1883,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0070.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0070.json",
               "resource": {
@@ -1840,6 +1910,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0071.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0071.json",
               "resource": {
@@ -1866,6 +1937,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0072.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0072.json",
               "resource": {
@@ -1892,6 +1964,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0073.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0073.json",
               "resource": {
@@ -1918,6 +1991,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0074.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0074.json",
               "resource": {
@@ -1944,6 +2018,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0075.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0075.json",
               "resource": {
@@ -1970,6 +2045,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0076.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0076.json",
               "resource": {
@@ -1996,6 +2072,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0077.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0077.json",
               "resource": {
@@ -2022,6 +2099,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0078.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0078.json",
               "resource": {
@@ -2048,6 +2126,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0079.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0079.json",
               "resource": {
@@ -2074,6 +2153,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0080.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0080.json",
               "resource": {
@@ -2100,6 +2180,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0081.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0081.json",
               "resource": {
@@ -2126,6 +2207,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0082.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0082.json",
               "resource": {
@@ -2152,6 +2234,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0083.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0083.json",
               "resource": {
@@ -2178,6 +2261,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0084.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0084.json",
               "resource": {
@@ -2204,6 +2288,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0085.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0085.json",
               "resource": {
@@ -2230,6 +2315,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0086.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0086.json",
               "resource": {
@@ -2256,6 +2342,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0087.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0087.json",
               "resource": {
@@ -2282,6 +2369,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0088.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0088.json",
               "resource": {
@@ -2308,6 +2396,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0089.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0089.json",
               "resource": {
@@ -2334,6 +2423,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0090.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0090.json",
               "resource": {
@@ -2360,6 +2450,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0091.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0091.json",
               "resource": {
@@ -2386,6 +2477,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0092.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0092.json",
               "resource": {
@@ -2412,6 +2504,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0093.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0093.json",
               "resource": {
@@ -2438,6 +2531,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0094.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0094.json",
               "resource": {
@@ -2464,6 +2558,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0095.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0095.json",
               "resource": {
@@ -2490,6 +2585,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0096.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0096.json",
               "resource": {
@@ -2516,6 +2612,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0097.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0097.json",
               "resource": {
@@ -2542,6 +2639,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0098.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0098.json",
               "resource": {
@@ -2568,6 +2666,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0099.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0099.json",
               "resource": {
@@ -2594,6 +2693,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0100.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0100.json",
               "resource": {
@@ -2620,6 +2720,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0101.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0101.json",
               "resource": {
@@ -2646,6 +2747,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0102.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0102.json",
               "resource": {
@@ -2672,6 +2774,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0103.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0103.json",
               "resource": {
@@ -2698,6 +2801,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0104.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0104.json",
               "resource": {
@@ -2724,6 +2828,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0105.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0105.json",
               "resource": {
@@ -2750,6 +2855,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0106.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0106.json",
               "resource": {
@@ -2776,6 +2882,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0107.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0107.json",
               "resource": {
@@ -2802,6 +2909,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0108.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0108.json",
               "resource": {
@@ -2828,6 +2936,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0109.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0109.json",
               "resource": {
@@ -2854,6 +2963,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0110.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0110.json",
               "resource": {
@@ -2880,6 +2990,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0111.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0111.json",
               "resource": {
@@ -2906,6 +3017,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0112.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0112.json",
               "resource": {
@@ -2932,6 +3044,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0113.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0113.json",
               "resource": {
@@ -2958,6 +3071,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0114.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0114.json",
               "resource": {
@@ -2984,6 +3098,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0115.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0115.json",
               "resource": {
@@ -3010,6 +3125,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0116.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0116.json",
               "resource": {
@@ -3036,6 +3152,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0117.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0117.json",
               "resource": {
@@ -3062,6 +3179,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0118.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0118.json",
               "resource": {
@@ -3088,6 +3206,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0119.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0119.json",
               "resource": {
@@ -3114,6 +3233,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0120.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0120.json",
               "resource": {
@@ -3140,6 +3260,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0121.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0121.json",
               "resource": {
@@ -3166,6 +3287,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0122.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0122.json",
               "resource": {
@@ -3192,6 +3314,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0123.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0123.json",
               "resource": {
@@ -3218,6 +3341,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0124.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0124.json",
               "resource": {
@@ -3244,6 +3368,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0125.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0125.json",
               "resource": {
@@ -3270,6 +3395,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0126.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0126.json",
               "resource": {
@@ -3296,6 +3422,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0127.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0127.json",
               "resource": {
@@ -3322,6 +3449,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0128.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0128.json",
               "resource": {
@@ -3348,6 +3476,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0129.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0129.json",
               "resource": {
@@ -3374,6 +3503,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0130.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0130.json",
               "resource": {
@@ -3400,6 +3530,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0131.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0131.json",
               "resource": {
@@ -3426,6 +3557,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0132.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0132.json",
               "resource": {
@@ -3452,6 +3584,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0133.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0133.json",
               "resource": {
@@ -3478,6 +3611,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0134.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0134.json",
               "resource": {
@@ -3504,6 +3638,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0135.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0135.json",
               "resource": {
@@ -3530,6 +3665,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0136.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0136.json",
               "resource": {
@@ -3556,6 +3692,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0137.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0137.json",
               "resource": {
@@ -3582,6 +3719,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0138.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0138.json",
               "resource": {
@@ -3608,6 +3746,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0139.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0139.json",
               "resource": {
@@ -3634,6 +3773,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0140.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0140.json",
               "resource": {
@@ -3660,6 +3800,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0141.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0141.json",
               "resource": {
@@ -3686,6 +3827,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0142.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0142.json",
               "resource": {
@@ -3712,6 +3854,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0143.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0143.json",
               "resource": {
@@ -3738,6 +3881,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0144.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0144.json",
               "resource": {
@@ -3764,6 +3908,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0145.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0145.json",
               "resource": {
@@ -3790,6 +3935,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0146.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0146.json",
               "resource": {
@@ -3816,6 +3962,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0147.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0147.json",
               "resource": {
@@ -3842,6 +3989,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0148.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0148.json",
               "resource": {
@@ -3868,6 +4016,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0149.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0149.json",
               "resource": {
@@ -3894,6 +4043,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0150.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0150.json",
               "resource": {
@@ -3920,6 +4070,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0151.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0151.json",
               "resource": {
@@ -3946,6 +4097,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0152.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0152.json",
               "resource": {
@@ -3972,6 +4124,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0153.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0153.json",
               "resource": {
@@ -3998,6 +4151,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0154.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0154.json",
               "resource": {
@@ -4024,6 +4178,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0155.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0155.json",
               "resource": {
@@ -4050,6 +4205,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0156.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0156.json",
               "resource": {
@@ -4076,6 +4232,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0157.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0157.json",
               "resource": {
@@ -4102,6 +4259,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0158.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0158.json",
               "resource": {
@@ -4128,6 +4286,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0159.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0159.json",
               "resource": {
@@ -4154,6 +4313,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0160.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0160.json",
               "resource": {
@@ -4180,6 +4340,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0161.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0161.json",
               "resource": {
@@ -4206,6 +4367,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0162.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0162.json",
               "resource": {
@@ -4232,6 +4394,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0163.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0163.json",
               "resource": {
@@ -4258,6 +4421,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0164.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0164.json",
               "resource": {
@@ -4284,6 +4448,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0165.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0165.json",
               "resource": {
@@ -4310,6 +4475,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0166.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0166.json",
               "resource": {
@@ -4336,6 +4502,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0167.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0167.json",
               "resource": {
@@ -4362,6 +4529,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0168.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0168.json",
               "resource": {
@@ -4388,6 +4556,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0169.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0169.json",
               "resource": {
@@ -4414,6 +4583,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0170.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0170.json",
               "resource": {
@@ -4440,6 +4610,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0171.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0171.json",
               "resource": {
@@ -4466,6 +4637,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0172.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0172.json",
               "resource": {
@@ -4492,6 +4664,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0173.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0173.json",
               "resource": {
@@ -4518,6 +4691,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0174.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0174.json",
               "resource": {
@@ -4544,6 +4718,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0175.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0175.json",
               "resource": {
@@ -4570,6 +4745,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0176.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0176.json",
               "resource": {
@@ -4596,6 +4772,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0177.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0177.json",
               "resource": {
@@ -4622,6 +4799,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0178.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0178.json",
               "resource": {
@@ -4648,6 +4826,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0179.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0179.json",
               "resource": {
@@ -4674,6 +4853,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0180.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0180.json",
               "resource": {
@@ -4700,6 +4880,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0181.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0181.json",
               "resource": {
@@ -4726,6 +4907,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0182.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0182.json",
               "resource": {
@@ -4752,6 +4934,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0183.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0183.json",
               "resource": {
@@ -4778,6 +4961,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0184.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0184.json",
               "resource": {
@@ -4804,6 +4988,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0185.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0185.json",
               "resource": {
@@ -4830,6 +5015,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0186.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0186.json",
               "resource": {
@@ -4856,6 +5042,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0187.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0187.json",
               "resource": {
@@ -4882,6 +5069,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0188.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0188.json",
               "resource": {
@@ -4908,6 +5096,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0189.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0189.json",
               "resource": {
@@ -4934,6 +5123,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0190.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0190.json",
               "resource": {
@@ -4960,6 +5150,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0191.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0191.json",
               "resource": {
@@ -4986,6 +5177,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0192.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0192.json",
               "resource": {
@@ -5012,6 +5204,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0193.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0193.json",
               "resource": {
@@ -5038,6 +5231,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0194.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0194.json",
               "resource": {
@@ -5064,6 +5258,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0195.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0195.json",
               "resource": {
@@ -5090,6 +5285,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0196.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0196.json",
               "resource": {
@@ -5116,6 +5312,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0197.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0197.json",
               "resource": {
@@ -5142,6 +5339,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0198.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0198.json",
               "resource": {
@@ -5168,6 +5366,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0199.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0199.json",
               "resource": {
@@ -5194,6 +5393,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0200.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0200.json",
               "resource": {
@@ -5220,6 +5420,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0201.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0201.json",
               "resource": {
@@ -5246,6 +5447,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0202.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0202.json",
               "resource": {
@@ -5272,6 +5474,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0203.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0203.json",
               "resource": {
@@ -5298,6 +5501,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0204.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0204.json",
               "resource": {
@@ -5324,6 +5528,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0205.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0205.json",
               "resource": {
@@ -5350,6 +5555,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0206.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0206.json",
               "resource": {
@@ -5376,6 +5582,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0207.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0207.json",
               "resource": {
@@ -5402,6 +5609,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0208.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0208.json",
               "resource": {
@@ -5428,6 +5636,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0209.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0209.json",
               "resource": {
@@ -5454,6 +5663,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0210.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0210.json",
               "resource": {
@@ -5480,6 +5690,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0211.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0211.json",
               "resource": {
@@ -5506,6 +5717,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0212.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0212.json",
               "resource": {
@@ -5532,6 +5744,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0213.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0213.json",
               "resource": {
@@ -5558,6 +5771,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0214.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0214.json",
               "resource": {
@@ -5584,6 +5798,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0215.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0215.json",
               "resource": {
@@ -5610,6 +5825,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0216.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0216.json",
               "resource": {
@@ -5636,6 +5852,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0217.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0217.json",
               "resource": {
@@ -5662,6 +5879,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0218.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0218.json",
               "resource": {
@@ -5688,6 +5906,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0219.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0219.json",
               "resource": {
@@ -5714,6 +5933,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0220.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0220.json",
               "resource": {
@@ -5740,6 +5960,7 @@
           "images": [
             {
               "@type": "oa:Annotation",
+              "@id": "https://danielgenkins.com/annotation/225290-0221.json",
               "motivation": "sc:painting",
               "on": "https://danielgenkins.com/canvas/225290-0221.json",
               "resource": {
