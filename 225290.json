@@ -3,7 +3,37 @@
   "@type": "sc:Manifest",
   "@id": "https://danielgenkins.com/225290.json",
   "label": "Baptisms, Burials and Marriages - 16th & 17th Centuries",
-  "description": "Box 1 - Baptisms, Burials and Marriages contains records created in Florida during the late-sixteenth and seventeenth centuries.   All records in Box 1 contain information on indios, negros, and españoles. It has the earliest baptismal, marriage, and burial records of the collection.  All of these records seem to have originally comprised a bound volume due to the presence of a title page that reads \"Libro de baptismos y matrimonios y entierros hechos en la ciudad de San Agustin de la Florida.\"  The baptismal records range from 15 June 1594 to 8 January 1616 and comprise folios 4r-41v.  At a minimum, all baptismal entries provide date of baptism; first name of the individual receiving baptism; if known, names of parents; godparent/s (padrino/s) name/s; name and title of priest who performed the baptism; and if not white, then the racial designation or skin color of the individual and/or parents.  Additional information includes, but is not limited to, the following:  legitimacy of birth, current residence of the padrinos, military rank and/or administrative title of any male named in the entry.  The burial records range from 162[1] to 1631 and comprise folios 81r-83v.  At a minimum, these burial entries provide date of burial; if not an infant, name of individual; if not white, racial designation, skin color, or slave status of individual.  Additional information includes, but is not limited to: miliatary rank and/or administrative title of any male named in the entry; name of spouse; whether or not individual has a will; whether or not the individual is a slave.  The marriage records  have two separate date and folio ranges.  The first set of marriage records ranges from 2 February 1594 through 14 June 1616 and comprises folios 84r-96v.  The second set of marriage records ranges from 23 November 1643 to 27 December 1676 and comprise folios 3r-6_v.  At a minimum, all of these marriage entries provide the date of the marriage; names of the bride and groom; name and title of priest who performed the marriage; and if not white, then the racial designation or skin color of the bridge, groom, parents, and/or padrino/s.  Additional information includes, but is not limited to, the following: marriage histories of bridge and groom, that is, either single or window/widower (soltero/a, viudo/a); location of marriage; padrinos' names and places of current residence; and military rank and/or administrative title of any male named in the entry.  ",
+  "description": "Box 1 - Baptisms, Burials and Marriages contains records created in Florida during the late-sixteenth and seventeenth centuries.  All records in Box 1 contain information on indios, negros, and españoles. It has the earliest baptismal, marriage, and burial records of the collection. All of these records seem to have originally comprised a bound volume due to the presence of a title page that reads \"Libro de baptismos y matrimonios y entierros hechos en la ciudad de San Agustin de la Florida.\" The baptismal records range from 15 June 1594 to 8 January 1616 and comprise folios 4r-41v. At a minimum, all baptismal entries provide date of baptism; first name of the individual receiving baptism; if known, names of parents; godparent/s (padrino/s) name/s; name and title of priest who performed the baptism; and if not white, then the racial designation or skin color of the individual and/or parents. Additional information includes, but is not limited to, the following: legitimacy of birth, current residence of the padrinos, military rank and/or administrative title of any male named in the entry. The burial records range from 162[1] to 1631 and comprise folios 81r-83v. At a minimum, these burial entries provide date of burial; if not an infant, name of individual; if not white, racial designation, skin color, or slave status of individual. Additional information includes, but is not limited to: miliatary rank and/or administrative title of any male named in the entry; name of spouse; whether or not individual has a will; whether or not the individual is a slave. The marriage records have two separate date and folio ranges. The first set of marriage records ranges from 2 February 1594 through 14 June 1616 and comprises folios 84r-96v. The second set of marriage records ranges from 23 November 1643 to 27 December 1676 and comprise folios 3r-6_v. At a minimum, all of these marriage entries provide the date of the marriage; names of the bride and groom; name and title of priest who performed the marriage; and if not white, then the racial designation or skin color of the bridge, groom, parents, and/or padrino/s. Additional information includes, but is not limited to, the following: marriage histories of bridge and groom, that is, either single or window/widower (soltero/a, viudo/a); location of marriage; padrinos' names and places of current residence; and military rank and/or administrative title of any male named in the entry. ",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "Baptisms, Burials and Marriages - 16th & 17th Centuries"
+    },
+    {
+      "label": "Creator",
+      "value": "Digitization of the Archives of the Diocese of St. Augustine (DADS)"
+    },
+    {
+      "label": "Subject",
+      "value": "Baptisms; Burials; Marriages; Spanish Florida; Early Modern"
+    },
+    {
+      "label": "Digitized by",
+      "value": "Slave Societies Digital Archive"
+    },
+    {
+      "label": "Identifier",
+      "value": "225290"
+    },
+    {
+      "label": "Date",
+      "value": "1594/1676"
+    },
+    {
+      "label": "Language",
+      "value": "Spanish; English"
+    }
+  ],
   "attribution": "Slave Societies Digital Archive",
   "logo": "https://images.slavesocieties.org/iiif/3/ssda_logo_horizontal.jpg/full/max/0/default.jpg",
   "sequences": [
