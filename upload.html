@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Upload to S3 & Process</title>
+  <style>
+    body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 2rem; }
+    #drop-zone { width: 400px; height: 200px; border: 2px dashed #aaa; border-radius: 10px;
+      display: flex; justify-content: center; align-items: center; color: #666; margin-bottom: 1rem;
+      transition: background-color 0.3s, border-color 0.3s, color 0.3s; }
+    #drop-zone.dragover { border-color: #333; color: #333; background-color: #f0f8ff; }
+    button { padding: 0.5rem 1rem; border: none; background: #007bff; color: white; border-radius: 5px; cursor: pointer; margin: 0.5rem; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+    #status, #result { width: 100%; max-width: 600px; margin-top: 1rem; white-space: pre-wrap;
+      background: #f2f2f2; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Upload & Process Images</h1>
+
+  <div id="drop-zone">Drag &amp; Drop Images Here</div>
+  <button id="file-button">Select Images</button>
+  <input type="file" id="file-input" accept="image/*" multiple style="display:none" />
+
+  <div id="status"></div>
+  <div id="result"></div>
+
+  <script>
+    const presignEndpoint = 'https://YOUR_API_GATEWAY_DOMAIN/presign';
+    const processEndpoint = 'https://YOUR_API_GATEWAY_DOMAIN/process';
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+    const fileButton = document.getElementById('file-button');
+    const statusEl = document.getElementById('status');
+    const resultEl = document.getElementById('result');
+
+    async function getPresignedUrl(filename) {
+      const res = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(filename)}`);
+      if (!res.ok) throw new Error(`Presign failed: ${res.status}`);
+      return res.json(); // expects { url, key }
+    }
+
+    async function handleFiles(files) {
+      statusEl.textContent = `Uploading ${files.length} file(s)...`;
+      const keys = [];
+      for (const file of files) {
+        statusEl.textContent = `Uploading ${file.name}...`;
+        const { url, key } = await getPresignedUrl(file.name);
+        await fetch(url, { method: 'PUT', body: file });
+        keys.push(key);
+      }
+
+      statusEl.textContent = 'Invoking processing API...';
+      const resp = await fetch(processEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ keys })
+      });
+      const data = await resp.json();
+      statusEl.textContent = '';
+      resultEl.textContent = JSON.stringify(data, null, 2);
+    }
+
+    ;['dragover','dragleave','drop'].forEach(evt => dropZone.addEventListener(evt, e => {
+      e.preventDefault();
+      dropZone.classList[evt==='dragover' ? 'add' : 'remove']('dragover');
+      if (evt==='drop') {
+        const dt = e.dataTransfer;
+        if (dt.files.length) handleFiles(Array.from(dt.files));
+      }
+    }));
+
+    fileButton.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length) handleFiles(Array.from(fileInput.files));
+    });
+  </script>
+</body>
+</html>
