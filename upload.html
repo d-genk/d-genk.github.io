@@ -38,12 +38,9 @@
     const resultEl = document.getElementById('result');
 
     async function getPresignedUrl(filename) {
-      const res = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(filename)}`, {
-        method: 'GET',
-        mode: 'cors'
-      });
+      const res = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(filename)}`);
       if (!res.ok) throw new Error(`Presign failed: ${res.status}`);
-      return res.json(); // expects { url, key, contentType }
+      return res.json(); // expects { url, key }
     }
 
     async function handleFiles(files) {
@@ -52,13 +49,12 @@
       try {
         for (const file of files) {
           statusEl.textContent = `Presigning ${file.name}...`;
-          const { url, key, contentType } = await getPresignedUrl(file.name);
+          const { url, key } = await getPresignedUrl(file.name);
 
           statusEl.textContent = `Uploading ${file.name}...`;
           const uploadResp = await fetch(url, {
             method: 'PUT',
-            mode: 'cors',
-            headers: { 'Content-Type': contentType },
+            headers: { 'Content-Type': file.type || 'application/octet-stream' },
             body: file
           });
           if (!uploadResp.ok) {
@@ -70,7 +66,6 @@
         statusEl.textContent = 'Invoking processing API...';
         const resp = await fetch(processEndpoint, {
           method: 'POST',
-          mode: 'cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ keys })
         });
