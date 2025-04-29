@@ -27,8 +27,10 @@
   <div id="result"></div>
 
   <script>
+    // Replace with your real endpoints
     const presignEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/presign';
     const processEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/process';
+
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
     const fileButton = document.getElementById('file-button');
@@ -36,43 +38,58 @@
     const resultEl = document.getElementById('result');
 
     async function getPresignedUrl(filename) {
-      const res = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(filename)}`);
+      const res = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(filename)}`, {
+        method: 'GET',
+        mode: 'cors'
+      });
       if (!res.ok) throw new Error(`Presign failed: ${res.status}`);
-      return res.json(); // expects { url, key }
+      return res.json(); // expects { url, key, contentType }
     }
 
     async function handleFiles(files) {
-        statusEl.textContent = `Uploading ${files.length} file(s)...`;
-        const keys = [];
+      statusEl.textContent = `Uploading ${files.length} file(s)...`;
+      const keys = [];
+      try {
         for (const file of files) {
-            statusEl.textContent = `Uploading ${file.name}...`;
-            const { url, key } = await getPresignedUrl(file.name);
-            const uploadResp = await fetch(url, {
+          statusEl.textContent = `Presigning ${file.name}...`;
+          const { url, key, contentType } = await getPresignedUrl(file.name);
+
+          statusEl.textContent = `Uploading ${file.name}...`;
+          const uploadResp = await fetch(url, {
             method: 'PUT',
-            headers: {
-                'Content-Type': file.type || 'application/octet-stream'
-            },
+            mode: 'cors',
+            headers: { 'Content-Type': contentType },
             body: file
-            });
-            if (!uploadResp.ok) {
+          });
+          if (!uploadResp.ok) {
             throw new Error(`Upload failed for ${file.name}: ${uploadResp.status}`);
-            }
-            keys.push(key);
+          }
+          keys.push(key);
         }
 
         statusEl.textContent = 'Invoking processing API...';
         const resp = await fetch(processEndpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ keys })
+          method: 'POST',
+          mode: 'cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ keys })
         });
-        const data = await resp.json();
-        statusEl.textContent = '';
-        resultEl.textContent = JSON.stringify(data, null, 2);
+        if (!resp.ok) {
+          const text = await resp.text();
+          throw new Error(`Processing failed: ${resp.status} ${text}`);
         }
 
+        const data = await resp.json();
+        statusEl.textContent = 'Done';
+        resultEl.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        statusEl.textContent = '';
+        resultEl.textContent = 'Error: ' + err.message;
+        console.error(err);
+      }
+    }
 
-    ;['dragover','dragleave','drop'].forEach(evt => dropZone.addEventListener(evt, e => {
+    ['dragover','dragleave','drop'].forEach(evt => dropZone.addEventListener(evt, e => {
       e.preventDefault();
       dropZone.classList[evt==='dragover' ? 'add' : 'remove']('dragover');
       if (evt==='drop') {
