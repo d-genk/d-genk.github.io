@@ -28,8 +28,8 @@
 
   <script>
     // Replace with your real endpoints
-    const presignEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/presign';
-    const processEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/process';
+    const presignEndpoint = 'https://YOUR_API_GATEWAY_DOMAIN/presign';
+    const processEndpoint = 'https://YOUR_API_GATEWAY_DOMAIN/process';
 
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
@@ -50,6 +50,10 @@
         for (const file of files) {
           statusEl.textContent = `Presigning ${file.name}...`;
           const { url, key } = await getPresignedUrl(file.name);
+
+          // Debug: log URL length and full URL to verify it's intact
+          console.log(`PUT URL length for ${file.name}:`, url.length);
+          console.log(`PUT URL for ${file.name}:`, url);
 
           statusEl.textContent = `Uploading ${file.name}...`;
           const uploadResp = await fetch(url, {
