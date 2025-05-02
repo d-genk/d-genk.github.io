@@ -92,7 +92,7 @@
             headers: { 'Content-Type': file.type || 'application/octet-stream' },
             body: file
           });
-          if (!uploadRes.ok) throw new Error(`Upload failed: ${uploadRes.status}`);
+          if (!uploadResp.ok) throw new Error(`Upload failed: ${uploadResp.status}`);
           keys.push(key);
         }
 
