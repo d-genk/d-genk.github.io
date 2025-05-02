@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Upload & Job Status Demo</title>
+  <title>Image Upload & Processing Job</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -28,6 +28,10 @@
       border-color: #333;
       color: #333;
       background-color: #f0f8ff;
+    }
+    #drop-zone.disabled {
+      pointer-events: none;
+      opacity: 0.5;
     }
     #status,
     #result {
@@ -66,8 +70,8 @@
 
   <script>
     // Endpoints
-    const presignEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/presign';
-    const jobsEndpoint    = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs';
+    const presignEndpoint = 'https://YOUR_API_GATEWAY_DOMAIN/presign';
+    const jobsEndpoint    = 'https://YOUR_API_GATEWAY_DOMAIN/jobs';
 
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
@@ -75,15 +79,25 @@
     const statusEl = document.getElementById('status');
     const resultEl = document.getElementById('result');
 
-    // Enqueue and poll
+    // State to prevent concurrent jobs
+    let processing = false;
+
     async function handleFiles(files) {
-      statusEl.textContent = `Uploading ${files.length} file(s)...`;
+      if (processing) return;
+      processing = true;
+      // Disable UI while processing
+      dropZone.classList.add('disabled');
+      fileButton.disabled = true;
+      statusEl.textContent = '';
+      resultEl.textContent = '';
+
       const keys = [];
       try {
         // 1) Presign & upload each file
         for (const file of files) {
           statusEl.textContent = `Presigning ${file.name}...`;
           const presignRes = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(file.name)}`);
+          if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
           const { url, key } = await presignRes.json();
 
           statusEl.textContent = `Uploading ${file.name}...`;
@@ -92,7 +106,8 @@
             headers: { 'Content-Type': file.type || 'application/octet-stream' },
             body: file
           });
-          if (!uploadResp.ok) throw new Error(`Upload failed: ${uploadResp.status}`);
+          if (!uploadRes.ok) throw new Error(`Upload failed: ${uploadRes.status}`);
+
           keys.push(key);
         }
 
@@ -111,6 +126,9 @@
         statusEl.textContent = '';
         resultEl.textContent = 'Error: ' + err.message;
         console.error(err);
+        processing = false;
+        dropZone.classList.remove('disabled');
+        fileButton.disabled = false;
       }
     }
 
@@ -125,24 +143,33 @@
         } else if (data.status === 'COMPLETE') {
           statusEl.textContent = 'Job complete!';
           resultEl.textContent = JSON.stringify(data.results, null, 2);
+          // Re-enable UI for new jobs
+          processing = false;
+          dropZone.classList.remove('disabled');
+          fileButton.disabled = false;
+          fileInput.value = '';
         } else {
           statusEl.textContent = 'Job error';
           resultEl.textContent = data.error || JSON.stringify(data);
+          processing = false;
+          dropZone.classList.remove('disabled');
+          fileButton.disabled = false;
         }
       } catch (err) {
         statusEl.textContent = '';
         resultEl.textContent = 'Error polling status: ' + err.message;
         console.error(err);
+        processing = false;
+        dropZone.classList.remove('disabled');
+        fileButton.disabled = false;
       }
     }
 
-    // Drag & drop and file picker
+    // Drag & drop and file picker events
     ['dragover','dragleave','drop'].forEach(evt => dropZone.addEventListener(evt, e => {
       e.preventDefault();
       dropZone.classList[evt === 'dragover' ? 'add' : 'remove']('dragover');
-      if (evt === 'drop') {
-        handleFiles(Array.from(e.dataTransfer.files));
-      }
+      if (evt === 'drop') handleFiles(Array.from(e.dataTransfer.files));
     }));
 
     fileButton.addEventListener('click', () => fileInput.click());
