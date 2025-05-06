@@ -138,9 +138,9 @@
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
         const data = await res.json();
 
-        if (data.status === 'PENDING' || data.status === 'IN_PROGRESS') {
-          setTimeout(() => pollStatus(jobId), 2000);
-        } else if (data.status === 'COMPLETE') {
+        if (['PENDING', 'IN_PROGRESS', 'SUBMITTED', 'WAITING_FOR_AGGREGATION'].includes(data.status)) {
+            setTimeout(() => pollStatus(jobId), 2000);
+          } else if (data.status === 'COMPLETE') {
           statusEl.textContent = 'Job complete!';
           resultEl.textContent = JSON.stringify(data.results, null, 2);
           // Re-enable UI for new jobs
