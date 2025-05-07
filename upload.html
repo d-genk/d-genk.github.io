@@ -65,35 +65,37 @@
   <button id="file-button">Or Select an Image</button>
   <input type="file" id="file-input" accept="image/*" style="display:none" multiple />
 
+  <button id="download-button" disabled>Download JSON</button> <!-- NEW BUTTON -->
+
   <div id="status"></div>
   <div id="result"></div>
 
   <script>
-    // Endpoints
     const presignEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/presign';
     const jobsEndpoint    = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs';
 
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
     const fileButton = document.getElementById('file-button');
+    const downloadButton = document.getElementById('download-button'); // NEW
     const statusEl = document.getElementById('status');
     const resultEl = document.getElementById('result');
 
-    // State to prevent concurrent jobs
     let processing = false;
+    let lastResults = null; // NEW: Hold JSON result for download
 
     async function handleFiles(files) {
       if (processing) return;
       processing = true;
-      // Disable UI while processing
       dropZone.classList.add('disabled');
       fileButton.disabled = true;
+      downloadButton.disabled = true; // Disable until results exist
       statusEl.textContent = '';
       resultEl.textContent = '';
+      lastResults = null;
 
       const keys = [];
       try {
-        // 1) Presign & upload each file
         for (const file of files) {
           statusEl.textContent = `Presigning ${file.name}...`;
           const presignRes = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(file.name)}`);
@@ -111,7 +113,6 @@
           keys.push(key);
         }
 
-        // 2) Enqueue job
         statusEl.textContent = 'Creating job...';
         const enqueueRes = await fetch(jobsEndpoint, {
           method: 'POST',
@@ -119,8 +120,6 @@
           body: JSON.stringify({ keys })
         });
         const { jobId } = await enqueueRes.json();
-
-        // 3) Poll status
         pollStatus(jobId);
       } catch (err) {
         statusEl.textContent = '';
@@ -139,11 +138,12 @@
         const data = await res.json();
 
         if (['PENDING', 'IN_PROGRESS', 'SUBMITTED', 'WAITING_FOR_AGGREGATION'].includes(data.status)) {
-            setTimeout(() => pollStatus(jobId), 2000);
-          } else if (data.status === 'COMPLETE') {
+          setTimeout(() => pollStatus(jobId), 2000);
+        } else if (data.status === 'COMPLETE') {
           statusEl.textContent = 'Job complete!';
           resultEl.textContent = JSON.stringify(data.results, null, 2);
-          // Re-enable UI for new jobs
+          lastResults = data.results; // Store result
+          downloadButton.disabled = false; // Enable download
           processing = false;
           dropZone.classList.remove('disabled');
           fileButton.disabled = false;
@@ -165,7 +165,19 @@
       }
     }
 
-    // Drag & drop and file picker events
+    function downloadJSON() {
+      if (!lastResults) return;
+      const blob = new Blob([JSON.stringify(lastResults, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'results.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    downloadButton.addEventListener('click', downloadJSON);
+
     ['dragover','dragleave','drop'].forEach(evt => dropZone.addEventListener(evt, e => {
       e.preventDefault();
       dropZone.classList[evt === 'dragover' ? 'add' : 'remove']('dragover');
