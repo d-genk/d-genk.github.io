@@ -123,6 +123,19 @@
   
           if (!uploadRes.ok) throw new Error(`Upload failed: ${uploadRes.status} (${filename})`);
         }
+
+        // Notify backend that uploads are complete
+        statusEl.textContent = 'Enqueuing job...';
+        const enqueueRes = await fetch(jobsEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            jobId,
+            keys: presignedUrls.map(u => u.key)
+          })
+        });
+
+        if (!enqueueRes.ok) throw new Error(`Enqueue failed: ${enqueueRes.status}`);
   
         // Poll for job status
         pollStatus(jobId);
