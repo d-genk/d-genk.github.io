@@ -33,6 +33,11 @@
       pointer-events: none;
       opacity: 0.5;
     }
+    #file-list {
+      margin-bottom: 1rem;
+      max-width: 400px;
+      text-align: left;
+    }
     #status,
     #result {
       width: 100%;
@@ -51,7 +56,7 @@
       color: white;
       border-radius: 5px;
       cursor: pointer;
-      margin-bottom: 1rem;
+      margin: 0.5rem;
     }
     button:disabled {
       background: #ccc;
@@ -61,70 +66,89 @@
 </head>
 <body>
   <h1>Image Upload & Processing Job</h1>
-  <div id="drop-zone">Drag & Drop an Image Here</div>
-  <button id="file-button">Or Select an Image</button>
+  <div id="drop-zone">Drag & Drop Images Here</div>
+  <button id="file-button">Or Select Images</button>
   <input type="file" id="file-input" accept="image/*" style="display:none" multiple />
-
-  <button id="download-button" disabled>Download JSON</button> <!-- NEW BUTTON -->
-
+  <div id="file-list"></div>
+  <button id="start-upload-button" disabled>Start Upload</button>
+  <button id="download-button" disabled>Download JSON</button>
   <div id="status"></div>
   <div id="result"></div>
 
   <script>
     const presignEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/presign';
-    const jobsEndpoint    = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs'; // unchanged
-  
+    const jobsEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs';
+
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
     const fileButton = document.getElementById('file-button');
+    const startUploadButton = document.getElementById('start-upload-button');
     const downloadButton = document.getElementById('download-button');
+    const fileListEl = document.getElementById('file-list');
     const statusEl = document.getElementById('status');
     const resultEl = document.getElementById('result');
-  
-    let processing = false;
+
+    let selectedFiles = [];
     let lastResults = null;
-  
-    async function handleFiles(files) {
-      if (processing) return;
+    let processing = false;
+
+    function updateFileList() {
+      fileListEl.textContent = selectedFiles.length
+        ? 'Files to upload:\n' + selectedFiles.map(f => `• ${f.name}`).join('\n')
+        : '';
+      startUploadButton.disabled = selectedFiles.length === 0 || processing;
+    }
+
+    function addFiles(files) {
+      for (const file of files) {
+        if (!selectedFiles.some(f => f.name === file.name)) {
+          selectedFiles.push(file);
+        }
+      }
+      updateFileList();
+    }
+
+    async function uploadFiles() {
+      if (processing || selectedFiles.length === 0) return;
       processing = true;
-      dropZone.classList.add('disabled');
+      startUploadButton.disabled = true;
       fileButton.disabled = true;
+      dropZone.classList.add('disabled');
       downloadButton.disabled = true;
       statusEl.textContent = '';
       resultEl.textContent = '';
       lastResults = null;
-  
-      const filenames = Array.from(files).map(file => file.name);
-  
+
+      const filenames = selectedFiles.map(file => file.name);
+
       try {
         statusEl.textContent = 'Requesting presigned URLs...';
-  
+
         const presignRes = await fetch(presignEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ filenames })
         });
-  
+
         if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
         const { jobId, presignedUrls } = await presignRes.json();
-  
-        // Upload each file using the returned presigned URLs
+
         for (const { filename, url } of presignedUrls) {
-          const file = Array.from(files).find(f => f.name === filename);
-          if (!file) throw new Error(`File ${filename} not found in selected files`);
-  
+          const file = selectedFiles.find(f => f.name === filename);
+          if (!file) throw new Error(`File ${filename} not found`);
+
           statusEl.textContent = `Uploading ${filename}...`;
-  
+
           const uploadRes = await fetch(url, {
             method: 'PUT',
             headers: { 'Content-Type': file.type || 'application/octet-stream' },
             body: file
           });
-  
+
           if (!uploadRes.ok) throw new Error(`Upload failed: ${uploadRes.status} (${filename})`);
         }
 
-        // Notify backend that uploads are complete
+        // Notify backend
         statusEl.textContent = 'Enqueuing job...';
         const enqueueRes = await fetch(jobsEndpoint, {
           method: 'POST',
@@ -136,25 +160,24 @@
         });
 
         if (!enqueueRes.ok) throw new Error(`Enqueue failed: ${enqueueRes.status}`);
-  
-        // Poll for job status
+
         pollStatus(jobId);
       } catch (err) {
         statusEl.textContent = '';
         resultEl.textContent = 'Error: ' + err.message;
         console.error(err);
         processing = false;
-        dropZone.classList.remove('disabled');
         fileButton.disabled = false;
+        dropZone.classList.remove('disabled');
       }
     }
-  
+
     async function pollStatus(jobId) {
       statusEl.textContent = `Checking status for job ${jobId}...`;
       try {
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
         const data = await res.json();
-  
+
         if (['PENDING', 'IN_PROGRESS', 'SUBMITTED', 'WAITING_FOR_AGGREGATION'].includes(data.status)) {
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETE') {
@@ -162,27 +185,29 @@
           resultEl.textContent = JSON.stringify(data.results, null, 2);
           lastResults = data.results;
           downloadButton.disabled = false;
-          processing = false;
-          dropZone.classList.remove('disabled');
-          fileButton.disabled = false;
-          fileInput.value = '';
+          resetUploadUI();
         } else {
           statusEl.textContent = 'Job error';
           resultEl.textContent = data.error || JSON.stringify(data);
-          processing = false;
-          dropZone.classList.remove('disabled');
-          fileButton.disabled = false;
+          resetUploadUI();
         }
       } catch (err) {
         statusEl.textContent = '';
         resultEl.textContent = 'Error polling status: ' + err.message;
         console.error(err);
-        processing = false;
-        dropZone.classList.remove('disabled');
-        fileButton.disabled = false;
+        resetUploadUI();
       }
     }
-  
+
+    function resetUploadUI() {
+      selectedFiles = [];
+      updateFileList();
+      fileInput.value = '';
+      processing = false;
+      dropZone.classList.remove('disabled');
+      fileButton.disabled = false;
+    }
+
     function downloadJSON() {
       if (!lastResults) return;
       const blob = new Blob([JSON.stringify(lastResults, null, 2)], { type: 'application/json' });
@@ -193,19 +218,19 @@
       a.click();
       URL.revokeObjectURL(url);
     }
-  
+
     downloadButton.addEventListener('click', downloadJSON);
-  
+    startUploadButton.addEventListener('click', uploadFiles);
+    fileButton.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => addFiles(Array.from(fileInput.files)));
+
     ['dragover', 'dragleave', 'drop'].forEach(evt =>
       dropZone.addEventListener(evt, e => {
         e.preventDefault();
         dropZone.classList[evt === 'dragover' ? 'add' : 'remove']('dragover');
-        if (evt === 'drop') handleFiles(Array.from(e.dataTransfer.files));
+        if (evt === 'drop') addFiles(Array.from(e.dataTransfer.files));
       })
     );
-  
-    fileButton.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', () => handleFiles(Array.from(fileInput.files)));
-  </script>  
+  </script>
 </body>
 </html>
