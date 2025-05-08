@@ -72,54 +72,59 @@
 
   <script>
     const presignEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/presign';
-    const jobsEndpoint    = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs';
-
+    const jobsEndpoint    = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs'; // unchanged
+  
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
     const fileButton = document.getElementById('file-button');
-    const downloadButton = document.getElementById('download-button'); // NEW
+    const downloadButton = document.getElementById('download-button');
     const statusEl = document.getElementById('status');
     const resultEl = document.getElementById('result');
-
+  
     let processing = false;
-    let lastResults = null; // NEW: Hold JSON result for download
-
+    let lastResults = null;
+  
     async function handleFiles(files) {
       if (processing) return;
       processing = true;
       dropZone.classList.add('disabled');
       fileButton.disabled = true;
-      downloadButton.disabled = true; // Disable until results exist
+      downloadButton.disabled = true;
       statusEl.textContent = '';
       resultEl.textContent = '';
       lastResults = null;
-
-      const keys = [];
+  
+      const filenames = Array.from(files).map(file => file.name);
+  
       try {
-        for (const file of files) {
-          statusEl.textContent = `Presigning ${file.name}...`;
-          const presignRes = await fetch(`${presignEndpoint}?filename=${encodeURIComponent(file.name)}`);
-          if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
-          const { url, key } = await presignRes.json();
-
-          statusEl.textContent = `Uploading ${file.name}...`;
+        statusEl.textContent = 'Requesting presigned URLs...';
+  
+        const presignRes = await fetch(presignEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ filenames })
+        });
+  
+        if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
+        const { jobId, presignedUrls } = await presignRes.json();
+  
+        // Upload each file using the returned presigned URLs
+        for (const { filename, url } of presignedUrls) {
+          const file = Array.from(files).find(f => f.name === filename);
+          if (!file) throw new Error(`File ${filename} not found in selected files`);
+  
+          statusEl.textContent = `Uploading ${filename}...`;
+  
           const uploadRes = await fetch(url, {
             method: 'PUT',
             headers: { 'Content-Type': file.type || 'application/octet-stream' },
             body: file
           });
-          if (!uploadRes.ok) throw new Error(`Upload failed: ${uploadRes.status}`);
-
-          keys.push(key);
+  
+          if (!uploadRes.ok) throw new Error(`Upload failed: ${uploadRes.status} (${filename})`);
         }
-
-        statusEl.textContent = 'Creating job...';
-        const enqueueRes = await fetch(jobsEndpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ keys })
-        });
-        const { jobId } = await enqueueRes.json();
+  
+        // Poll for job status
         pollStatus(jobId);
       } catch (err) {
         statusEl.textContent = '';
@@ -130,20 +135,20 @@
         fileButton.disabled = false;
       }
     }
-
+  
     async function pollStatus(jobId) {
       statusEl.textContent = `Checking status for job ${jobId}...`;
       try {
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
         const data = await res.json();
-
+  
         if (['PENDING', 'IN_PROGRESS', 'SUBMITTED', 'WAITING_FOR_AGGREGATION'].includes(data.status)) {
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETE') {
           statusEl.textContent = 'Job complete!';
           resultEl.textContent = JSON.stringify(data.results, null, 2);
-          lastResults = data.results; // Store result
-          downloadButton.disabled = false; // Enable download
+          lastResults = data.results;
+          downloadButton.disabled = false;
           processing = false;
           dropZone.classList.remove('disabled');
           fileButton.disabled = false;
@@ -164,7 +169,7 @@
         fileButton.disabled = false;
       }
     }
-
+  
     function downloadJSON() {
       if (!lastResults) return;
       const blob = new Blob([JSON.stringify(lastResults, null, 2)], { type: 'application/json' });
@@ -175,19 +180,19 @@
       a.click();
       URL.revokeObjectURL(url);
     }
-
+  
     downloadButton.addEventListener('click', downloadJSON);
-
-    ['dragover','dragleave','drop'].forEach(evt => dropZone.addEventListener(evt, e => {
-      e.preventDefault();
-      dropZone.classList[evt === 'dragover' ? 'add' : 'remove']('dragover');
-      if (evt === 'drop') handleFiles(Array.from(e.dataTransfer.files));
-    }));
-
+  
+    ['dragover', 'dragleave', 'drop'].forEach(evt =>
+      dropZone.addEventListener(evt, e => {
+        e.preventDefault();
+        dropZone.classList[evt === 'dragover' ? 'add' : 'remove']('dragover');
+        if (evt === 'drop') handleFiles(Array.from(e.dataTransfer.files));
+      })
+    );
+  
     fileButton.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', () => {
-      handleFiles(Array.from(fileInput.files));
-    });
-  </script>
+    fileInput.addEventListener('change', () => handleFiles(Array.from(fileInput.files)));
+  </script>  
 </body>
 </html>
