@@ -101,7 +101,10 @@
 
     function updateFileList() {
       fileListEl.textContent = selectedFiles.length
-        ? 'Files to upload:\n' + selectedFiles.map(f => `• ${f.webkitRelativePath || f.name}`).join('\n')
+        ? 'Files to upload:\n' +
+          selectedFiles.map(f =>
+            `• ${(f.webkitRelativePath || f.name)}`
+          ).join('\n')
         : '';
       startUploadButton.disabled = selectedFiles.length === 0 || processing;
     }
