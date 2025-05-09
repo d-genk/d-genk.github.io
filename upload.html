@@ -101,20 +101,16 @@
 
     function updateFileList() {
       fileListEl.textContent = selectedFiles.length
-        ? 'Files to upload:\n' +
-          selectedFiles.map(f =>
-            `• ${(f.webkitRelativePath || f.name)}`
-          ).join('\n')
+        ? 'Files to upload:\n' + selectedFiles.map(f => `• ${f.relativePath || f.file.name}`).join('\n')
         : '';
       startUploadButton.disabled = selectedFiles.length === 0 || processing;
     }
 
-    function addFiles(files) {
-      for (const file of files) {
+    function addFiles(fileObjs) {
+      for (const { file, relativePath } of fileObjs) {
         if (!isValidImage(file)) continue;
-        const path = file.webkitRelativePath || file.name;
-        if (!selectedFiles.some(f => (f.webkitRelativePath || f.name) === path)) {
-          selectedFiles.push(file);
+        if (!selectedFiles.some(f => f.relativePath === relativePath)) {
+          selectedFiles.push({ file, relativePath });
         }
       }
       updateFileList();
@@ -131,7 +127,7 @@
       resultEl.textContent = '';
       lastResults = null;
 
-      const filenames = selectedFiles.map(file => file.webkitRelativePath || file.name);
+      const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
 
       try {
         statusEl.textContent = 'Requesting presigned URLs...';
@@ -146,9 +142,10 @@
         const { jobId, presignedUrls } = await presignRes.json();
 
         for (const { filename, url } of presignedUrls) {
-          const file = selectedFiles.find(f => (f.webkitRelativePath || f.name) === filename);
-          if (!file) throw new Error(`File ${filename} not found`);
+          const match = selectedFiles.find(f => (f.relativePath || f.file.name) === filename);
+          if (!match) throw new Error(`File ${filename} not found`);
 
+          const { file } = match;
           statusEl.textContent = `Uploading ${filename}...`;
 
           const uploadRes = await fetch(url, {
@@ -189,7 +186,7 @@
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
         const data = await res.json();
 
-        if (['PENDING', 'IN_PROGRESS', 'SUBMITTED', 'WAITING_FOR_AGGREGATION'].includes(data.status)) {
+        if (["PENDING", "IN_PROGRESS", "SUBMITTED", "WAITING_FOR_AGGREGATION"].includes(data.status)) {
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETE') {
           statusEl.textContent = `Job ${jobId} complete!`;
@@ -234,8 +231,7 @@
       return new Promise(resolve => {
         if (entry.isFile) {
           entry.file(file => {
-            file.webkitRelativePath = path + entry.name;
-            resolve([file]);
+            resolve([{ file, relativePath: path + entry.name }]);
           });
         } else if (entry.isDirectory) {
           const reader = entry.createReader();
@@ -250,11 +246,14 @@
       });
     }
 
-
     downloadButton.addEventListener('click', downloadJSON);
     startUploadButton.addEventListener('click', uploadFiles);
     fileButton.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', () => addFiles(Array.from(fileInput.files)));
+    fileInput.addEventListener('change', () => {
+      const files = Array.from(fileInput.files);
+      const wrapped = files.map(f => ({ file: f, relativePath: f.name }));
+      addFiles(wrapped);
+    });
 
     ['dragover', 'dragleave'].forEach(evt =>
       dropZone.addEventListener(evt, e => {
