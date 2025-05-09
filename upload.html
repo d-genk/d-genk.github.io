@@ -67,9 +67,8 @@
 <body>
   <h1>Image Upload & Processing Job</h1>
   <div id="drop-zone">Drag & Drop Images or Folders Here</div>
-  <button id="file-button">Or Select Images/Folders</button>
-  <input type="file" id="file-input-files" style="display:none" multiple />
-  <input type="file" id="file-input-folders" style="display:none" webkitdirectory directory />
+  <button id="file-button">Or Select Images</button>
+  <input type="file" id="file-input" style="display:none" multiple />
   <div id="file-list"></div>
   <button id="start-upload-button" disabled>Start Upload</button>
   <button id="download-button" disabled>Download JSON</button>
@@ -81,8 +80,7 @@
     const jobsEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs';
 
     const dropZone = document.getElementById('drop-zone');
-    const fileInputFiles = document.getElementById('file-input-files');
-    const fileInputFolders = document.getElementById('file-input-folders');
+    const fileInput = document.getElementById('file-input');
     const fileButton = document.getElementById('file-button');
     const startUploadButton = document.getElementById('start-upload-button');
     const downloadButton = document.getElementById('download-button');
@@ -212,8 +210,7 @@
     function resetUploadUI() {
       selectedFiles = [];
       updateFileList();
-      fileInputFiles.value = '';
-      fileInputFolders.value = '';
+      fileInput.value = '';
       processing = false;
       dropZone.classList.remove('disabled');
       fileButton.disabled = false;
@@ -247,15 +244,8 @@
 
     downloadButton.addEventListener('click', downloadJSON);
     startUploadButton.addEventListener('click', uploadFiles);
-
-    // Let users choose either files or folders from the same button
-    fileButton.addEventListener('click', () => {
-      fileInputFiles.click();
-      fileInputFolders.click();
-    });
-
-    fileInputFiles.addEventListener('change', () => addFiles(Array.from(fileInputFiles.files)));
-    fileInputFolders.addEventListener('change', () => addFiles(Array.from(fileInputFolders.files)));
+    fileButton.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => addFiles(Array.from(fileInput.files)));
 
     ['dragover', 'dragleave'].forEach(evt =>
       dropZone.addEventListener(evt, e => {
