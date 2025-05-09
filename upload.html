@@ -230,20 +230,26 @@
       URL.revokeObjectURL(url);
     }
 
-    async function getFilesFromEntry(entry) {
+    async function getFilesFromEntry(entry, path = '') {
       return new Promise(resolve => {
         if (entry.isFile) {
-          entry.file(file => resolve([file]));
+          entry.file(file => {
+            file.webkitRelativePath = path + entry.name;
+            resolve([file]);
+          });
         } else if (entry.isDirectory) {
           const reader = entry.createReader();
           reader.readEntries(entries => {
-            Promise.all(entries.map(getFilesFromEntry)).then(results => resolve(results.flat()));
+            Promise.all(
+              entries.map(subEntry => getFilesFromEntry(subEntry, path + entry.name + '/'))
+            ).then(results => resolve(results.flat()));
           });
         } else {
           resolve([]);
         }
       });
     }
+
 
     downloadButton.addEventListener('click', downloadJSON);
     startUploadButton.addEventListener('click', uploadFiles);
