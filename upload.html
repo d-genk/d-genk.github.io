@@ -66,9 +66,9 @@
 </head>
 <body>
   <h1>Image Upload & Processing Job</h1>
-  <div id="drop-zone">Drag & Drop Images or Folders Here</div>
-  <button id="file-button">Or Select Images</button>
-  <input type="file" id="file-input" style="display:none" multiple />
+  <div id="drop-zone">Drag & Drop Images or PDFs Here</div>
+  <button id="file-button">Or Select Files</button>
+  <input type="file" id="file-input" style="display:none" multiple accept=".jpg,.jpeg,.png,.bmp,.gif,.tiff,.tif,.webp,.pdf" />
   <div id="file-list"></div>
   <button id="start-upload-button" disabled>Start Upload</button>
   <button id="download-button" disabled>Download JSON</button>
@@ -88,15 +88,15 @@
     const statusEl = document.getElementById('status');
     const resultEl = document.getElementById('result');
 
-    const PIL_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.tif', '.webp'];
+    const ACCEPTED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.tif', '.webp', '.pdf'];
 
     let selectedFiles = [];
     let lastResults = null;
     let processing = false;
 
-    function isValidImage(file) {
+    function isValidFile(file) {
       const lower = file.name.toLowerCase();
-      return PIL_EXTENSIONS.some(ext => lower.endsWith(ext));
+      return ACCEPTED_EXTENSIONS.some(ext => lower.endsWith(ext));
     }
 
     function updateFileList() {
@@ -108,7 +108,7 @@
 
     function addFiles(fileObjs) {
       for (const { file, relativePath } of fileObjs) {
-        if (!isValidImage(file)) continue;
+        if (!isValidFile(file)) continue;
         if (!selectedFiles.some(f => f.relativePath === relativePath)) {
           selectedFiles.push({ file, relativePath });
         }
