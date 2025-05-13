@@ -33,10 +33,14 @@
       pointer-events: none;
       opacity: 0.5;
     }
+    #file-button {
+      margin-bottom: 2rem; /* increased space below button */
+    }
+
     #file-list {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem; /* reduced space below file list */
       max-width: 400px;
-      max-height: 200px; /* Show up to ~10 lines */
+      max-height: 200px;
       overflow-y: auto;
       text-align: left;
       border: 1px solid #ccc;
@@ -46,7 +50,9 @@
       font-family: monospace;
       white-space: pre-wrap;
       word-break: break-word;
+      display: none; /* hidden until files added */
     }
+
     #status,
     #result {
       width: 100%;
@@ -109,9 +115,15 @@
     }
 
     function updateFileList() {
-      fileListEl.innerHTML = selectedFiles.length
-        ? selectedFiles.map(f => `<div>${f.relativePath || f.file.name}</div>`).join('')
-        : '';
+      if (selectedFiles.length === 0) {
+        fileListEl.style.display = 'block';
+        fileListEl.innerHTML = '<em>Files to upload will appear here...</em>';
+      } else {
+        fileListEl.style.display = 'block';
+        fileListEl.innerHTML = selectedFiles
+          .map(f => `<div>${f.relativePath || f.file.name}</div>`)
+          .join('');
+      }
       startUploadButton.disabled = selectedFiles.length === 0 || processing;
     }
 
