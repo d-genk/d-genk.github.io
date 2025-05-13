@@ -36,7 +36,16 @@
     #file-list {
       margin-bottom: 1rem;
       max-width: 400px;
+      max-height: 200px; /* Show up to ~10 lines */
+      overflow-y: auto;
       text-align: left;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0.5rem;
+      background: #fafafa;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
     #status,
     #result {
@@ -100,8 +109,8 @@
     }
 
     function updateFileList() {
-      fileListEl.textContent = selectedFiles.length
-        ? 'Files to upload:\n' + selectedFiles.map(f => `• ${f.relativePath || f.file.name}`).join('\n')
+      fileListEl.innerHTML = selectedFiles.length
+        ? selectedFiles.map(f => `<div>${f.relativePath || f.file.name}</div>`).join('')
         : '';
       startUploadButton.disabled = selectedFiles.length === 0 || processing;
     }
