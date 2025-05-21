@@ -149,6 +149,7 @@
       lastResults = null;
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
+      const steps = ["foliate"];
 
       try {
         statusEl.textContent = 'Requesting presigned URLs...';
@@ -156,7 +157,7 @@
         const presignRes = await fetch(presignEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filenames })
+          body: JSON.stringify({ filenames, steps })
         });
 
         if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
@@ -184,7 +185,8 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             jobId,
-            keys: presignedUrls.map(u => u.key)
+            keys: presignedUrls.map(u => u.key),
+            steps
           })
         });
 
