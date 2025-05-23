@@ -149,7 +149,7 @@
       lastResults = null;
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
-      const steps = ["foliate"];
+      const steps = [];
 
       try {
         statusEl.textContent = 'Requesting presigned URLs...';
