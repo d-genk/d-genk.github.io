@@ -85,6 +85,12 @@
   <button id="file-button">Or Select Files</button>
   <input type="file" id="file-input" style="display:none" multiple accept=".jpg,.jpeg,.png,.bmp,.gif,.tiff,.tif,.webp,.pdf" />
   <div id="file-list"></div>
+  <div style="margin: 1rem 0;">
+    <label>
+      <input type="checkbox" id="foliate-checkbox" />
+      Perform foliation
+    </label>
+  </div>
   <button id="start-upload-button" disabled>Start Upload</button>
   <button id="download-button" disabled>Download JSON</button>
   <div id="status"></div>
@@ -150,6 +156,8 @@
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
       const steps = [];
+      const foliate = document.getElementById('foliate-checkbox').checked;
+      if (foliate) steps.push("foliate");
 
       try {
         statusEl.textContent = 'Requesting presigned URLs...';
