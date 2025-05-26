@@ -85,10 +85,14 @@
   <button id="file-button">Or Select Files</button>
   <input type="file" id="file-input" style="display:none" multiple accept=".jpg,.jpeg,.png,.bmp,.gif,.tiff,.tif,.webp,.pdf" />
   <div id="file-list"></div>
-  <div style="margin: 1rem 0;">
+  <div style="margin: 1rem 0; display: flex; gap: 1rem; align-items: center;">
     <label>
       <input type="checkbox" id="foliate-checkbox" />
-      Perform foliation
+      Foliate
+    </label>
+    <label>
+      <input type="checkbox" id="transcribe-checkbox" />
+      Transcribe
     </label>
   </div>
   <button id="start-upload-button" disabled>Start Upload</button>
@@ -156,9 +160,13 @@
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
       const steps = [];
-      const foliate = document.getElementById('foliate-checkbox').checked;
-      if (foliate) steps.push("foliate");
-
+      if (document.getElementById('foliate-checkbox').checked) {
+        steps.push("foliate");
+      }
+      if (document.getElementById('transcribe-checkbox').checked) {
+        steps.push("transcribe");
+      }
+      
       try {
         statusEl.textContent = 'Requesting presigned URLs...';
 
