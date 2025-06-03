@@ -98,6 +98,10 @@
       <input type="checkbox" id="metadata-checkbox" disabled />
       Metadata
     </label>
+    <label>
+      <input type="checkbox" id="ner-checkbox" disabled />
+      NER
+    </label>
   </div>
   <button id="start-upload-button" disabled>Start Upload</button>
   <button id="download-button" disabled>Download JSON</button>
@@ -172,6 +176,9 @@
       }
       if (document.getElementById('metadata-checkbox').checked) {
         steps.push("metadata");
+      }
+      if (document.getElementById('ner-checkbox').checked) {
+        steps.push("ner");
       }
       
       try {
@@ -322,11 +329,19 @@
 
     const foliateCheckbox = document.getElementById('foliate-checkbox');
     const metadataCheckbox = document.getElementById('metadata-checkbox');
+    const transcribeCheckbox = document.getElementById('transcribe-checkbox');
+    const nerCheckbox = document.getElementById('ner-checkbox');
 
     foliateCheckbox.addEventListener('change', () => {
       metadataCheckbox.disabled = !foliateCheckbox.checked;
       if (!foliateCheckbox.checked) {
         metadataCheckbox.checked = false;
+      }
+    });
+    nerCheckbox.addEventListener('change', () => {
+      nerCheckbox.disabled = !transcribeCheckbox.checked;
+      if (!transcribeCheckbox.checked) {
+        nerCheckbox.checked = false;
       }
     });
   </script>
