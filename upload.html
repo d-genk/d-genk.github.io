@@ -127,6 +127,13 @@
     let lastResults = null;
     let processing = false;
 
+    function formatStatus(status) {
+      if (!status) return '';
+      return status
+        .toLowerCase()
+        .replace(/_/g, ' ')        
+    }
+
     function isValidFile(file) {
       const lower = file.name.toLowerCase();
       return ACCEPTED_EXTENSIONS.some(ext => lower.endsWith(ext));
@@ -231,15 +238,17 @@
         fileButton.disabled = false;
         dropZone.classList.remove('disabled');
       }
-    }
+    }    
 
     async function pollStatus(jobId) {
       statusEl.textContent = `Checking status for job ${jobId}...`;
+      resultEl.textContent = '';
       try {
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
         const data = await res.json();
 
-        if (["PENDING", "IN_PROGRESS", "SUBMITTED", "WAITING_FOR_AGGREGATION"].includes(data.status)) {
+        if (["PENDING", "IN_PROGRESS", "SUBMITTED", "WAITING_FOR_AGGREGATION", "CAPTIONING", "TRANSCRIBING", "FOLIATING", "GENERATING_METADATA", "AGGREGATING"].includes(data.status)) {
+          statusEl.textContent = `Job ${jobId} is ${formatStatus(data.status)}.`;
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETE') {
           statusEl.textContent = `Job ${jobId} complete!`;
@@ -248,7 +257,7 @@
           downloadButton.disabled = false;
           resetUploadUI();
         } else {
-          statusEl.textContent = 'Job error';
+          statusEl.textContent = `Job ${jobId} error: ${data.status}`;
           resultEl.textContent = data.error || JSON.stringify(data);
           resetUploadUI();
         }
