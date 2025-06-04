@@ -240,8 +240,7 @@
       }
     }    
 
-    async function pollStatus(jobId) {
-      statusEl.textContent = `Checking status for job ${jobId}...`;
+    async function pollStatus(jobId) {      
       resultEl.textContent = '';
       try {
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
