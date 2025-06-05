@@ -308,7 +308,7 @@
         if (["PENDING", "IN_PROGRESS", "SUBMITTED", "WAITING_FOR_AGGREGATION", "CAPTIONING", "TRANSCRIBING", "FOLIATING", "GENERATING_METADATA", "AGGREGATING"].includes(data.status)) {
           statusEl.textContent = `Job ${jobId} is ${formatStatus(data.status)}.`;
           setTimeout(() => pollStatus(jobId), 2000);
-        } else if (data.status === 'COMPLETE') {
+        } else if (data.status === 'COMPLETED') {
           statusEl.textContent = `Job ${jobId} complete!`;
 
           // --- SORT RESULTS BEFORE DISPLAY ---
