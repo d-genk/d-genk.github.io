@@ -314,14 +314,14 @@
           // --- SORT RESULTS BEFORE DISPLAY ---
           const sortedResults = data.results.map(sortKeys);
 
-          resultEl.innerHTML = syntaxHighlightJson(sortedResults);
+          resultEl.innerHTML = sortedResults;
 
           lastResults = sortedResults; // also store sorted version
           downloadButton.disabled = false;
           resetUploadUI();
         } else {
           statusEl.textContent = `Job ${jobId} error: ${data.status}`;
-          resultEl.innerHTML = syntaxHighlightJson(data.error || data);
+          resultEl.innerHTML = data.error || data;
           resetUploadUI();
         }
       } catch (err) {
