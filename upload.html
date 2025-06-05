@@ -76,12 +76,7 @@
     button:disabled {
       background: #ccc;
       cursor: not-allowed;
-    }
-    .json-key { color: brown; }
-    .json-string { color: green; }
-    .json-number { color: blue; }
-    .json-boolean { color: darkorange; }
-    .json-null { color: magenta; }
+    }    
   </style>
 </head>
 <body>
@@ -140,7 +135,7 @@
     }
 
     function sortKeys(obj) {
-      const orderedKeys = ["title", "item_description", "metadata", "item_named_entities", "images"];
+      const orderedKeys = ["title", "item_description", "metadata", "item_named_entities", "images", "file", "image_caption", "transcription", "image_named_entities"];
       const sortedObj = {};
       
       for (const key of orderedKeys) {
@@ -158,40 +153,6 @@
       
       return sortedObj;
     }
-
-
-    function syntaxHighlightJson(obj) {
-      const json = JSON.stringify(obj, (key, value) => {
-        if (typeof value === 'string') {
-          return value.replace(/\\n/g, '\n'); // turn \\n into real newlines
-        }
-        return value;
-      }, 2);
-
-      const escaped = json.replace(/[&<>"']/g, function (c) {
-        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-      });
-
-      return escaped.replace(
-        /("(\\u[\da-fA-F]{4}|\\[^u]|[^\\"])*"(?:\s*:)?|\b(true|false|null)\b|-?\d+(\.\d*)?([eE][+-]?\d+)?)/g,
-        match => {
-          let cls = 'json-number';
-          if (/^"/.test(match)) {
-            if (/:$/.test(match)) {
-              cls = 'json-key';
-            } else {
-              cls = 'json-string';
-            }
-          } else if (/true|false/.test(match)) {
-            cls = 'json-boolean';
-          } else if (/null/.test(match)) {
-            cls = 'json-null';
-          }
-          return `<span class="${cls}">${match}</span>`;
-        }
-      );
-    }
-
 
     function isValidFile(file) {
       const lower = file.name.toLowerCase();
@@ -314,7 +275,7 @@
           // --- SORT RESULTS BEFORE DISPLAY ---
           const sortedResults = data.results.map(sortKeys);
 
-          resultEl.textContent = JSON.stringify(sortedResults);
+          resultEl.textContent = JSON.stringify(sortedResults, null, 2);
 
           lastResults = sortedResults; // also store sorted version
           downloadButton.disabled = false;
