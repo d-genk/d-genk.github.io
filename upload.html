@@ -77,6 +77,11 @@
       background: #ccc;
       cursor: not-allowed;
     }
+    .json-key { color: brown; }
+    .json-string { color: green; }
+    .json-number { color: blue; }
+    .json-boolean { color: darkorange; }
+    .json-null { color: magenta; }
   </style>
 </head>
 <body>
@@ -133,6 +138,39 @@
         .toLowerCase()
         .replace(/_/g, ' ')        
     }
+
+    function syntaxHighlightJson(obj) {
+      const json = JSON.stringify(obj, (key, value) => {
+        if (typeof value === 'string') {
+          return value.replace(/\\n/g, '\n'); // turn \\n into real newlines
+        }
+        return value;
+      }, 2);
+
+      const escaped = json.replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+
+      return escaped.replace(
+        /("(\\u[\da-fA-F]{4}|\\[^u]|[^\\"])*"(?:\s*:)?|\b(true|false|null)\b|-?\d+(\.\d*)?([eE][+-]?\d+)?)/g,
+        match => {
+          let cls = 'json-number';
+          if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+              cls = 'json-key';
+            } else {
+              cls = 'json-string';
+            }
+          } else if (/true|false/.test(match)) {
+            cls = 'json-boolean';
+          } else if (/null/.test(match)) {
+            cls = 'json-null';
+          }
+          return `<span class="${cls}">${match}</span>`;
+        }
+      );
+    }
+
 
     function isValidFile(file) {
       const lower = file.name.toLowerCase();
@@ -241,7 +279,7 @@
     }    
 
     async function pollStatus(jobId) {      
-      resultEl.textContent = '';
+      resultEl.innerHTML = '';
       try {
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
         const data = await res.json();
@@ -251,14 +289,13 @@
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETE') {
           statusEl.textContent = `Job ${jobId} complete!`;
-          resultEl.textContent = JSON.stringify(data.results, null, 2);
+          resultEl.innerHTML = syntaxHighlightJson(data.results);
           lastResults = data.results;
           downloadButton.disabled = false;
           resetUploadUI();
         } else {
           statusEl.textContent = `Job ${jobId} error: ${data.status}`;
-          resultEl.textContent = data.error || JSON.stringify(data);
-          resultEl.style.whiteSpace = 'pre-wrap';
+          resultEl.innerHTML = syntaxHighlightJson(data.error || data);
           resetUploadUI();
         }
       } catch (err) {
@@ -268,6 +305,7 @@
         resetUploadUI();
       }
     }
+
 
     function resetUploadUI() {
       selectedFiles = [];
