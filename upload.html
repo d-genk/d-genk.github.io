@@ -139,6 +139,27 @@
         .replace(/_/g, ' ')        
     }
 
+    function sortKeys(obj) {
+      const orderedKeys = ["title", "item_description", "metadata", "item_named_entities", "images"];
+      const sortedObj = {};
+      
+      for (const key of orderedKeys) {
+        if (key in obj) {
+          sortedObj[key] = obj[key];
+        }
+      }
+      
+      // Optionally, add any other keys not explicitly listed
+      for (const key of Object.keys(obj)) {
+        if (!orderedKeys.includes(key)) {
+          sortedObj[key] = obj[key];
+        }
+      }
+      
+      return sortedObj;
+    }
+
+
     function syntaxHighlightJson(obj) {
       const json = JSON.stringify(obj, (key, value) => {
         if (typeof value === 'string') {
@@ -289,8 +310,13 @@
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETE') {
           statusEl.textContent = `Job ${jobId} complete!`;
-          resultEl.innerHTML = syntaxHighlightJson(data.results);
-          lastResults = data.results;
+
+          // --- SORT RESULTS BEFORE DISPLAY ---
+          const sortedResults = data.results.map(sortKeys);
+
+          resultEl.innerHTML = syntaxHighlightJson(sortedResults);
+
+          lastResults = sortedResults; // also store sorted version
           downloadButton.disabled = false;
           resetUploadUI();
         } else {
@@ -305,6 +331,7 @@
         resetUploadUI();
       }
     }
+
 
 
     function resetUploadUI() {
