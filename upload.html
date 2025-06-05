@@ -258,6 +258,7 @@
         } else {
           statusEl.textContent = `Job ${jobId} error: ${data.status}`;
           resultEl.textContent = data.error || JSON.stringify(data);
+          resultEl.style.whiteSpace = 'pre-wrap';
           resetUploadUI();
         }
       } catch (err) {
