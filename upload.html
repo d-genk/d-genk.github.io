@@ -85,6 +85,10 @@
   <button id="file-button">Or Select Files</button>
   <input type="file" id="file-input" style="display:none" multiple accept=".jpg,.jpeg,.png,.bmp,.gif,.tiff,.tif,.webp,.pdf" />
   <div id="file-list"></div>
+  <div style="margin: 1rem 0; width: 100%; max-width: 600px;">
+  <label for="description" style="font-weight: bold;">Job Description (optional, max 512 characters):</label>
+  <textarea id="description" maxlength="512" rows="3" style="width: 100%; padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+  </div>
   <div style="margin: 1rem 0; display: flex; gap: 1rem; align-items: center;">
     <label>
       <input type="checkbox" id="foliate-checkbox" />
@@ -195,26 +199,20 @@
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
       const steps = [];
-      if (document.getElementById('foliate-checkbox').checked) {
-        steps.push("foliate");
-      }
-      if (document.getElementById('transcribe-checkbox').checked) {
-        steps.push("transcribe");
-      }
-      if (document.getElementById('metadata-checkbox').checked) {
-        steps.push("metadata");
-      }
-      if (document.getElementById('ner-checkbox').checked) {
-        steps.push("ner");
-      }
-      
+      if (document.getElementById('foliate-checkbox').checked) steps.push("foliate");
+      if (document.getElementById('transcribe-checkbox').checked) steps.push("transcribe");
+      if (document.getElementById('metadata-checkbox').checked) steps.push("metadata");
+      if (document.getElementById('ner-checkbox').checked) steps.push("ner");
+
+      const description = document.getElementById('description').value.trim();
+
       try {
         statusEl.textContent = 'Requesting presigned URLs...';
 
         const presignRes = await fetch(presignEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filenames, steps })
+          body: JSON.stringify({ filenames, steps, description })
         });
 
         if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
@@ -248,7 +246,6 @@
         });
 
         if (!enqueueRes.ok) throw new Error(`Enqueue failed: ${enqueueRes.status}`);
-
         pollStatus(jobId);
       } catch (err) {
         statusEl.textContent = '';
@@ -258,7 +255,8 @@
         fileButton.disabled = false;
         dropZone.classList.remove('disabled');
       }
-    }    
+    }
+    
 
     async function pollStatus(jobId) {      
       resultEl.innerHTML = '';
