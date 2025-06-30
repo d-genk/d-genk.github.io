@@ -76,7 +76,44 @@
     button:disabled {
       background: #ccc;
       cursor: not-allowed;
-    }    
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px; width: 18px;
+      left: 3px; bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #007bff;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
   </style>
 </head>
 <body>
@@ -107,6 +144,13 @@
       NER
     </label>
   </div>
+  <div style="margin: 1rem 0; display: flex; align-items: center; gap: 1rem;">
+    <label for="maintain-linebreaks-toggle" style="font-weight: bold;">Maintain Line Breaks:</label>
+    <label class="switch">
+      <input type="checkbox" id="maintain-linebreaks-toggle" checked>
+      <span class="slider round"></span>
+    </label>
+  </div>
   <button id="start-upload-button" disabled>Start Upload</button>
   <button id="download-button" disabled>Download JSON</button>
   <div id="status"></div>
@@ -126,6 +170,8 @@
     const resultEl = document.getElementById('result');
 
     const ACCEPTED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.tif', '.webp', '.pdf'];
+
+    const maintainLinebreaksToggle = document.getElementById('maintain-linebreaks-toggle');
 
     let selectedFiles = [];
     let lastResults = null;
@@ -199,6 +245,9 @@
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
       const steps = [];
+      const options = {
+        maintainLineBreaks: maintainLinebreaksToggle.checked
+      };
       if (document.getElementById('foliate-checkbox').checked) steps.push("foliate");
       if (document.getElementById('transcribe-checkbox').checked) steps.push("transcribe");
       if (document.getElementById('metadata-checkbox').checked) steps.push("metadata");
@@ -212,7 +261,7 @@
         const presignRes = await fetch(presignEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filenames, steps, description })
+          body: JSON.stringify({ filenames, steps, description, options })
         });
 
         if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
