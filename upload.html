@@ -34,11 +34,11 @@
       opacity: 0.5;
     }
     #file-button {
-      margin-bottom: 2rem; /* increased space below button */
+      margin-bottom: 2rem;
     }
 
     #file-list {
-      margin-bottom: 0.5rem; /* reduced space below file list */
+      margin-bottom: 0.5rem;
       max-width: 400px;
       max-height: 200px;
       overflow-y: auto;
@@ -50,7 +50,7 @@
       font-family: monospace;
       white-space: pre-wrap;
       word-break: break-word;
-      display: none; /* hidden until files added */
+      display: none;
     }
 
     #status,
@@ -113,7 +113,6 @@
     input:checked + .slider:before {
       transform: translateX(26px);
     }
-    
   </style>
 </head>
 <body>
@@ -123,8 +122,8 @@
   <input type="file" id="file-input" style="display:none" multiple accept=".jpg,.jpeg,.png,.bmp,.gif,.tiff,.tif,.webp,.pdf" />
   <div id="file-list"></div>
   <div style="margin: 1rem 0; width: 100%; max-width: 600px;">
-  <label for="description" style="font-weight: bold;">Job Description (optional, max 512 characters):</label>
-  <textarea id="description" maxlength="512" rows="3" style="width: 100%; padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+    <label for="description" style="font-weight: bold;">Job Description (optional, max 512 characters):</label>
+    <textarea id="description" maxlength="512" rows="3" style="width: 100%; padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc;"></textarea>
   </div>
   <div style="margin: 1rem 0; display: flex; gap: 1rem; align-items: center;">
     <label>
@@ -144,10 +143,13 @@
       NER
     </label>
   </div>
+  <!-- Updated Maintain Line Breaks Toggle -->
   <div style="margin: 1rem 0; display: flex; align-items: center; gap: 1rem;">
-    <label for="maintain-linebreaks-toggle" style="font-weight: bold;">Maintain Line Breaks:</label>
-    <label class="switch">
-      <input type="checkbox" id="maintain-linebreaks-toggle" checked>
+    <label for="maintain-linebreaks-toggle" id="maintain-linebreaks-label" style="font-weight: normal; opacity: 0.5;">
+      Maintain Line Breaks:
+    </label>
+    <label class="switch" style="opacity: 0.5;" id="maintain-linebreaks-switch-label">
+      <input type="checkbox" id="maintain-linebreaks-toggle" checked disabled>
       <span class="slider round"></span>
     </label>
   </div>
@@ -157,6 +159,7 @@
   <div id="result"></div>
 
   <script>
+    // === VARIABLE DEFINITIONS (must come first) ===
     const presignEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/presign';
     const jobsEndpoint = 'https://30nz0ijx1f.execute-api.us-east-1.amazonaws.com/jobs';
 
@@ -172,35 +175,34 @@
     const ACCEPTED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.tif', '.webp', '.pdf'];
 
     const maintainLinebreaksToggle = document.getElementById('maintain-linebreaks-toggle');
+    const maintainLinebreaksLabel = document.getElementById('maintain-linebreaks-label');
+    const maintainLinebreaksSwitchLabel = document.getElementById('maintain-linebreaks-switch-label');
 
     let selectedFiles = [];
     let lastResults = null;
     let processing = false;
 
+    // === FUNCTIONS ===
     function formatStatus(status) {
       if (!status) return '';
       return status
         .toLowerCase()
-        .replace(/_/g, ' ')        
+        .replace(/_/g, ' ');
     }
 
     function sortKeys(obj) {
       const orderedKeys = ["title", "item_description", "metadata", "item_named_entities", "images", "file", "image_caption", "transcription", "image_named_entities"];
       const sortedObj = {};
-      
       for (const key of orderedKeys) {
         if (key in obj) {
           sortedObj[key] = obj[key];
         }
       }
-      
-      // Optionally, add any other keys not explicitly listed
       for (const key of Object.keys(obj)) {
         if (!orderedKeys.includes(key)) {
           sortedObj[key] = obj[key];
         }
       }
-      
       return sortedObj;
     }
 
@@ -305,9 +307,8 @@
         dropZone.classList.remove('disabled');
       }
     }
-    
 
-    async function pollStatus(jobId) {      
+    async function pollStatus(jobId) {
       resultEl.innerHTML = '';
       try {
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
@@ -318,13 +319,9 @@
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETED') {
           statusEl.textContent = `Job ${jobId} complete!`;
-
-          // --- SORT RESULTS BEFORE DISPLAY ---
           const sortedResults = data.results.map(sortKeys);
-
           resultEl.textContent = JSON.stringify(sortedResults, null, 2);
-
-          lastResults = sortedResults; // also store sorted version
+          lastResults = sortedResults;
           downloadButton.disabled = false;
           resetUploadUI();
         } else {
@@ -339,8 +336,6 @@
         resetUploadUI();
       }
     }
-
-
 
     function resetUploadUI() {
       selectedFiles = [];
@@ -409,6 +404,7 @@
       addFiles(flatFiles);
     });
 
+    // Checkbox enable/disable logic
     const foliateCheckbox = document.getElementById('foliate-checkbox');
     const metadataCheckbox = document.getElementById('metadata-checkbox');
     const transcribeCheckbox = document.getElementById('transcribe-checkbox');
@@ -426,6 +422,22 @@
         nerCheckbox.checked = false;
       }
     });
+
+    // === Maintain Line Breaks Toggle Logic ===
+    function updateMaintainLinebreaksState() {
+      if (transcribeCheckbox.checked) {
+        maintainLinebreaksToggle.disabled = false;
+        maintainLinebreaksLabel.style.opacity = '1';
+        maintainLinebreaksSwitchLabel.style.opacity = '1';
+      } else {
+        maintainLinebreaksToggle.disabled = true;
+        maintainLinebreaksLabel.style.opacity = '0.5';
+        maintainLinebreaksSwitchLabel.style.opacity = '0.5';
+      }
+    }
+    transcribeCheckbox.addEventListener('change', updateMaintainLinebreaksState);
+    updateMaintainLinebreaksState(); // initial state
+
   </script>
 </body>
 </html>
