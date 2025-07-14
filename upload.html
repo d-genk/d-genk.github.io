@@ -131,19 +131,22 @@
       Foliate
     </label>
     <label>
+      <input type="checkbox" id="metadata-checkbox" disabled />
+      Metadata
+    </label>
+    <label>
       <input type="checkbox" id="transcribe-checkbox" />
       Transcribe
     </label>
     <label>
-      <input type="checkbox" id="metadata-checkbox" disabled />
-      Metadata
+      <input type="checkbox" id="layout-checkbox" disabled />
+      Layout
     </label>
     <label>
       <input type="checkbox" id="ner-checkbox" disabled />
       NER
     </label>
-  </div>
-  <!-- Updated Maintain Line Breaks Toggle -->
+  </div>  
   <div style="margin: 1rem 0; display: flex; align-items: center; gap: 1rem;">
     <label for="maintain-linebreaks-toggle" id="maintain-linebreaks-label" style="font-weight: normal; opacity: 0.5;">
       Maintain Line Breaks:
@@ -252,6 +255,7 @@
       };
       if (document.getElementById('foliate-checkbox').checked) steps.push("foliate");
       if (document.getElementById('transcribe-checkbox').checked) steps.push("transcribe");
+      if (document.getElementById('layout-checkbox').checked) steps.push("layout");
       if (document.getElementById('metadata-checkbox').checked) steps.push("metadata");
       if (document.getElementById('ner-checkbox').checked) steps.push("ner");
 
@@ -409,6 +413,7 @@
     const metadataCheckbox = document.getElementById('metadata-checkbox');
     const transcribeCheckbox = document.getElementById('transcribe-checkbox');
     const nerCheckbox = document.getElementById('ner-checkbox');
+    const layoutCheckbox = document.getElementById('layout-checkbox');
 
     foliateCheckbox.addEventListener('change', () => {
       metadataCheckbox.disabled = !foliateCheckbox.checked;
@@ -417,13 +422,17 @@
       }
     });
     transcribeCheckbox.addEventListener('change', () => {
-      nerCheckbox.disabled = !transcribeCheckbox.checked;
-      if (!transcribeCheckbox.checked) {
+      const isChecked = transcribeCheckbox.checked;
+
+      nerCheckbox.disabled = !isChecked;
+      layoutCheckbox.disabled = !isChecked;
+
+      if (!isChecked) {
         nerCheckbox.checked = false;
+        layoutCheckbox.checked = false;
       }
     });
-
-    // === Maintain Line Breaks Toggle Logic ===
+    
     function updateMaintainLinebreaksState() {
       if (transcribeCheckbox.checked) {
         maintainLinebreaksToggle.disabled = false;
