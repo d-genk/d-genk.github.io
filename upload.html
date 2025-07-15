@@ -432,9 +432,30 @@
         layoutCheckbox.checked = false;
       }
     });
+    layoutCheckbox.addEventListener('change', () => {
+      if (layoutCheckbox.checked) {
+        maintainLinebreaksToggle.checked = true;
+        maintainLinebreaksToggle.disabled = true;
+        maintainLinebreaksLabel.style.opacity = '0.5';
+        maintainLinebreaksSwitchLabel.style.opacity = '0.5';
+      } else {
+        // Only re-enable toggle if Transcribe is checked
+        if (transcribeCheckbox.checked) {
+          maintainLinebreaksToggle.disabled = false;
+          maintainLinebreaksLabel.style.opacity = '1';
+          maintainLinebreaksSwitchLabel.style.opacity = '1';
+        }
+        // If Transcribe is unchecked, leave it disabled (as normal)
+      }
+    });
     
     function updateMaintainLinebreaksState() {
-      if (transcribeCheckbox.checked) {
+      if (layoutCheckbox.checked) {
+        maintainLinebreaksToggle.checked = true;
+        maintainLinebreaksToggle.disabled = true;
+        maintainLinebreaksLabel.style.opacity = '0.5';
+        maintainLinebreaksSwitchLabel.style.opacity = '0.5';
+      } else if (transcribeCheckbox.checked) {
         maintainLinebreaksToggle.disabled = false;
         maintainLinebreaksLabel.style.opacity = '1';
         maintainLinebreaksSwitchLabel.style.opacity = '1';
@@ -445,6 +466,7 @@
       }
     }
     transcribeCheckbox.addEventListener('change', updateMaintainLinebreaksState);
+    layoutCheckbox.addEventListener('change', updateMaintainLinebreaksState);
     updateMaintainLinebreaksState(); // initial state
 
   </script>
