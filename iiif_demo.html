@@ -2,107 +2,198 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>IIIF Demo Viewer with Manifest Loader</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Mirador 3 CDN bundle -->
-  <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/mirador@latest/dist/styles/mirador.min.css" />
+  <title>IIIF Region Annotation Demo</title>
   <style>
-    body { margin: 0; background: #222; color: #eee; font-family: sans-serif; }
+    body { background: #23272f; color: #eee; font-family: sans-serif; margin: 0; }
     #loader-bar {
-      background: #262626;
-      padding: 1em 2em;
-      display: flex;
-      gap: 1em;
-      align-items: center;
-      border-bottom: 1px solid #333;
+      background: #20222a; padding: 1em 2em; display: flex; gap: 1em; align-items: center; border-bottom: 1px solid #333;
     }
-    #manifest-input {
-      flex: 1;
-      min-width: 300px;
-      font-size: 1em;
-      padding: 0.3em 0.6em;
-      border: 1px solid #555;
-      border-radius: 4px;
-      background: #181818;
-      color: #fff;
-    }
-    #load-btn {
-      padding: 0.4em 1em;
-      font-size: 1em;
-      border-radius: 4px;
-      border: none;
-      background: #3f90ff;
-      color: #fff;
+    #manifest-input { flex: 1; min-width: 340px; font-size: 1em; padding: 0.4em 0.7em; border-radius: 4px; border: 1px solid #555; background: #181818; color: #fff; }
+    #load-btn { padding: 0.5em 1.2em; font-size: 1em; border-radius: 4px; border: none; background: #378cff; color: #fff; cursor: pointer; transition: background 0.2s; }
+    #load-btn:hover { background: #2265c7; }
+    #viewer-container { display: flex; }
+    #canvas-holder { position: relative; background: #111; flex: 1 1 auto; height: 85vh; display: flex; justify-content: center; align-items: center; min-width: 400px; }
+    #iiif-canvas { box-shadow: 0 0 20px #0008; background: #111; max-width: 98vw; max-height: 84vh; }
+    .overlay-region {
+      position: absolute;
+      border: 2px solid #3fc1ff;
+      background: rgba(63,193,255,0.15);
       cursor: pointer;
-      transition: background 0.2s;
+      transition: border 0.1s, background 0.1s;
     }
-    #load-btn:hover {
-      background: #2374d9;
+    .overlay-region.active {
+      border: 2px solid #ffcb6b;
+      background: rgba(255,203,107,0.20);
+      z-index: 2;
     }
-    #viewer {
-      width: 100vw;
-      height: calc(100vh - 60px);
-      background: #181818;
+    #sidebar {
+      width: 350px;
+      background: #1a1c23;
+      border-left: 1px solid #29303a;
+      min-height: 85vh;
+      padding: 1.5em 1em;
+      font-size: 1.04em;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
     }
-    @media (max-width: 700px) {
-      #loader-bar { flex-direction: column; gap: 0.6em; }
-      #viewer { height: calc(100vh - 100px); }
+    #sidebar h3 { color: #ffd866; margin-top: 0; }
+    #annotation-text { margin-top: 1.5em; white-space: pre-line; }
+    @media (max-width: 950px) {
+      #viewer-container { flex-direction: column; }
+      #sidebar { width: 100vw; border-left: none; border-top: 1px solid #29303a; min-height: unset; }
+      #canvas-holder { height: 50vh; }
     }
   </style>
 </head>
 <body>
   <div id="loader-bar">
-    <label for="manifest-input" style="font-weight: bold;">IIIF Manifest URL:</label>
+    <label for="manifest-input" style="font-weight:bold;">IIIF Manifest URL:</label>
     <input id="manifest-input" type="text" placeholder="Paste IIIF Manifest URL here" />
     <button id="load-btn">Load Manifest</button>
   </div>
-  <div id="viewer"></div>
+  <div id="viewer-container">
+    <div id="canvas-holder">
+      <canvas id="iiif-canvas"></canvas>
+      <!-- overlays dynamically inserted here -->
+    </div>
+    <div id="sidebar">
+      <h3>Annotation</h3>
+      <div id="annotation-text">Click a highlighted region to view its text here.</div>
+    </div>
+  </div>
   <script>
-    let miradorInstance = null;
+    const manifestInput = document.getElementById('manifest-input');
+    const loadBtn = document.getElementById('load-btn');
+    const canvasElem = document.getElementById('iiif-canvas');
+    const canvasHolder = document.getElementById('canvas-holder');
+    const annotationText = document.getElementById('annotation-text');
 
-    function loadMirador(manifestUrl) {
-      // Remove old viewer if it exists
-      const viewerDiv = document.getElementById('viewer');
-      viewerDiv.innerHTML = '';
-      miradorInstance = Mirador.viewer({
-        id: 'viewer',
-        windows: [
-          {
-            manifestId: manifestUrl,
-            canvasIndex: 0,
-          },
-        ],
-        window: {
-          allowClose: false,
-          allowFullscreen: true,
-          allowMaximize: true,
-          sideBarOpenByDefault: true,
-          defaultSideBarPanel: 'annotations',
-          views: [
-            { key: "single", behaviors: ["manifest", "canvas"] },
-          ],
-        },
-        workspaceControlPanel: {
-          enabled: false,
-        },
-        annotation: {
-          enabled: true,
-        },
-      });
-    }
+    let overlays = [];
+    let imageInfo = null;
+    let annotationRegions = [];
 
-    document.getElementById('load-btn').onclick = function() {
-      const manifestUrl = document.getElementById('manifest-input').value.trim();
-      if (manifestUrl) {
-        loadMirador(manifestUrl);
-      } else {
-        alert("Please enter a valid IIIF manifest URL.");
+    loadBtn.onclick = async function() {
+      const url = manifestInput.value.trim();
+      if (!url) return alert('Paste a IIIF manifest URL!');
+      try {
+        await loadManifest(url);
+      } catch (e) {
+        alert('Failed to load manifest or image:\n' + (e.message || e));
       }
     };
 
-    // Optionally: load a default manifest for demo
-    // loadMirador('https://iiif.harvardartmuseums.org/manifests/object/299843');
+    async function loadManifest(manifestUrl) {
+      clearViewer();
+      annotationText.innerText = "Loading manifest...";
+      // Fetch IIIF manifest
+      const response = await fetch(manifestUrl);
+      if (!response.ok) throw new Error("Manifest fetch failed.");
+      const manifest = await response.json();
+      // Assume first canvas for demo
+      const canvas = manifest.items && manifest.items[0];
+      if (!canvas) throw new Error("No canvas found in manifest.");
+      imageInfo = {
+        width: canvas.width,
+        height: canvas.height
+      };
+      // Find painting annotation
+      const paintingPage = canvas.items && canvas.items[0];
+      const paintingAnno = paintingPage && paintingPage.items && paintingPage.items.find(a => a.motivation === "painting");
+      const imageUrl = paintingAnno && paintingAnno.body && paintingAnno.body.id;
+      if (!imageUrl) throw new Error("No painting annotation/image found.");
+      // Draw image on canvas
+      await drawImageOnCanvas(imageUrl, imageInfo.width, imageInfo.height);
+      // Find region annotations (motivation: supplementing)
+      annotationRegions = [];
+      if (canvas.annotations && Array.isArray(canvas.annotations)) {
+        for (const page of canvas.annotations) {
+          if (!page.items) continue;
+          for (const anno of page.items) {
+            if (anno.motivation === "supplementing" && anno.target && anno.body && anno.body.value) {
+              const xywhMatch = /#xywh=(\d+),(\d+),(\d+),(\d+)/.exec(anno.target);
+              if (xywhMatch) {
+                annotationRegions.push({
+                  x: +xywhMatch[1], y: +xywhMatch[2],
+                  w: +xywhMatch[3], h: +xywhMatch[4],
+                  text: anno.body.value,
+                  annoId: anno.id
+                });
+              }
+            }
+          }
+        }
+      }
+      // Overlay regions
+      drawOverlays();
+      annotationText.innerText = "Click a highlighted region to view its text here.";
+    }
+
+    function drawImageOnCanvas(imgUrl, imgW, imgH) {
+      return new Promise((resolve, reject) => {
+        const img = new window.Image();
+        img.crossOrigin = "anonymous";
+        img.onload = function() {
+          // Fit to window while preserving aspect
+          let maxW = canvasHolder.clientWidth - 4;
+          let maxH = canvasHolder.clientHeight - 4;
+          let scale = Math.min(maxW / imgW, maxH / imgH, 1);
+          let dispW = Math.round(imgW * scale);
+          let dispH = Math.round(imgH * scale);
+          canvasElem.width = dispW;
+          canvasElem.height = dispH;
+          canvasElem.style.width = dispW + "px";
+          canvasElem.style.height = dispH + "px";
+          // Draw image
+          let ctx = canvasElem.getContext("2d");
+          ctx.clearRect(0,0,dispW,dispH);
+          ctx.drawImage(img, 0, 0, dispW, dispH);
+          // Save display info
+          imageInfo.displayWidth = dispW;
+          imageInfo.displayHeight = dispH;
+          imageInfo.scale = scale;
+          resolve();
+        };
+        img.onerror = reject;
+        img.src = imgUrl;
+      });
+    }
+
+    function clearViewer() {
+      overlays.forEach(div => div.remove());
+      overlays = [];
+      annotationRegions = [];
+      annotationText.innerText = "";
+    }
+
+    function drawOverlays() {
+      clearViewer();
+      overlays = [];
+      annotationRegions.forEach((region, idx) => {
+        const div = document.createElement('div');
+        div.className = 'overlay-region';
+        const scale = imageInfo.scale || 1;
+        div.style.left = (region.x * scale + canvasElem.offsetLeft) + "px";
+        div.style.top = (region.y * scale + canvasElem.offsetTop) + "px";
+        div.style.width = (region.w * scale) + "px";
+        div.style.height = (region.h * scale) + "px";
+        div.title = "Click to view text";
+        div.onclick = function() {
+          overlays.forEach(o => o.classList.remove('active'));
+          div.classList.add('active');
+          annotationText.innerText = region.text;
+        };
+        // Deselect on click outside
+        canvasHolder.onclick = function(e) {
+          if (e.target === canvasElem) {
+            overlays.forEach(o => o.classList.remove('active'));
+            annotationText.innerText = "Click a highlighted region to view its text here.";
+          }
+        };
+        canvasHolder.appendChild(div);
+        overlays.push(div);
+      });
+    }
   </script>
 </body>
 </html>
