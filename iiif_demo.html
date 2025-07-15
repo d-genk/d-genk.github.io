@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>IIIF Region Annotation Demo</title>
+  <title>IIIF Region Annotation Demo (Improved)</title>
   <style>
     body { background: #23272f; color: #eee; font-family: sans-serif; margin: 0; }
     #loader-bar {
@@ -20,6 +20,7 @@
       background: rgba(63,193,255,0.15);
       cursor: pointer;
       transition: border 0.1s, background 0.1s;
+      pointer-events: auto;
     }
     .overlay-region.active {
       border: 2px solid #ffcb6b;
@@ -79,7 +80,7 @@
       try {
         await loadManifest(url);
       } catch (e) {
-        alert('Failed to load manifest or image:\n' + (e.message || e));
+        annotationText.innerText = "Failed to load manifest or image:\n" + (e.message || e);
       }
     };
 
@@ -102,7 +103,7 @@
       const paintingAnno = paintingPage && paintingPage.items && paintingPage.items.find(a => a.motivation === "painting");
       const imageUrl = paintingAnno && paintingAnno.body && paintingAnno.body.id;
       if (!imageUrl) throw new Error("No painting annotation/image found.");
-      // Draw image on canvas
+      // Draw image on canvas, then overlays after image is loaded
       await drawImageOnCanvas(imageUrl, imageInfo.width, imageInfo.height);
       // Find region annotations (motivation: supplementing)
       annotationRegions = [];
@@ -124,9 +125,10 @@
           }
         }
       }
-      // Overlay regions
       drawOverlays();
       annotationText.innerText = "Click a highlighted region to view its text here.";
+      // Make overlays responsive to window resize
+      window.onresize = () => { redrawOverlaysOnly(); }
     }
 
     function drawImageOnCanvas(imgUrl, imgW, imgH) {
@@ -144,7 +146,6 @@
           canvasElem.height = dispH;
           canvasElem.style.width = dispW + "px";
           canvasElem.style.height = dispH + "px";
-          // Draw image
           let ctx = canvasElem.getContext("2d");
           ctx.clearRect(0,0,dispW,dispH);
           ctx.drawImage(img, 0, 0, dispW, dispH);
@@ -152,6 +153,7 @@
           imageInfo.displayWidth = dispW;
           imageInfo.displayHeight = dispH;
           imageInfo.scale = scale;
+          // Overlays will be positioned absolutely over the canvas
           resolve();
         };
         img.onerror = reject;
@@ -167,31 +169,55 @@
     }
 
     function drawOverlays() {
-      clearViewer();
+      // Remove old overlays
+      overlays.forEach(div => div.remove());
       overlays = [];
+      // For each region, create an absolutely positioned div over the canvas
       annotationRegions.forEach((region, idx) => {
         const div = document.createElement('div');
         div.className = 'overlay-region';
         const scale = imageInfo.scale || 1;
-        div.style.left = (region.x * scale + canvasElem.offsetLeft) + "px";
-        div.style.top = (region.y * scale + canvasElem.offsetTop) + "px";
+        // Place relative to the canvas's actual position in the holder
+        const rect = canvasElem.getBoundingClientRect();
+        const holderRect = canvasHolder.getBoundingClientRect();
+        // Calculate offsets relative to canvas-holder
+        const offsetX = canvasElem.offsetLeft;
+        const offsetY = canvasElem.offsetTop;
+        div.style.left = (region.x * scale + offsetX) + "px";
+        div.style.top = (region.y * scale + offsetY) + "px";
         div.style.width = (region.w * scale) + "px";
         div.style.height = (region.h * scale) + "px";
         div.title = "Click to view text";
-        div.onclick = function() {
+        div.onclick = function(e) {
           overlays.forEach(o => o.classList.remove('active'));
           div.classList.add('active');
           annotationText.innerText = region.text;
-        };
-        // Deselect on click outside
-        canvasHolder.onclick = function(e) {
-          if (e.target === canvasElem) {
-            overlays.forEach(o => o.classList.remove('active'));
-            annotationText.innerText = "Click a highlighted region to view its text here.";
-          }
+          e.stopPropagation();
         };
         canvasHolder.appendChild(div);
         overlays.push(div);
+      });
+      // Click outside region clears selection
+      canvasHolder.onclick = function(e) {
+        if (e.target === canvasElem || e.target === canvasHolder) {
+          overlays.forEach(o => o.classList.remove('active'));
+          annotationText.innerText = "Click a highlighted region to view its text here.";
+        }
+      };
+    }
+
+    // Redraw overlays only, for responsive resizing
+    function redrawOverlaysOnly() {
+      if (!imageInfo || !annotationRegions.length) return;
+      overlays.forEach((div, idx) => {
+        const region = annotationRegions[idx];
+        const scale = imageInfo.scale || 1;
+        const offsetX = canvasElem.offsetLeft;
+        const offsetY = canvasElem.offsetTop;
+        div.style.left = (region.x * scale + offsetX) + "px";
+        div.style.top = (region.y * scale + offsetY) + "px";
+        div.style.width = (region.w * scale) + "px";
+        div.style.height = (region.h * scale) + "px";
       });
     }
   </script>
