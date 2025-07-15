@@ -318,7 +318,7 @@
         const res = await fetch(`${jobsEndpoint}/${jobId}`);
         const data = await res.json();
 
-        if (["PENDING", "IN_PROGRESS", "SUBMITTED", "WAITING_FOR_AGGREGATION", "CAPTIONING", "TRANSCRIBING", "FOLIATING", "GENERATING_METADATA", "AGGREGATING"].includes(data.status)) {
+        if (["PENDING", "IN_PROGRESS", "SUBMITTED", "WAITING_FOR_AGGREGATION", "CAPTIONING", "TRANSCRIBING", "FOLIATING", "GENERATING_METADATA", "AGGREGATING", "ANALYZING_LAYOUT"].includes(data.status)) {
           statusEl.textContent = `Job ${jobId} is ${formatStatus(data.status)}.`;
           setTimeout(() => pollStatus(jobId), 2000);
         } else if (data.status === 'COMPLETED') {
