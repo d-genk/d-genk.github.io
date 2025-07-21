@@ -271,7 +271,7 @@
         const presignRes = await fetch(presignEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filenames, steps, description, metadata })
+          body: JSON.stringify({ filenames, steps, description, metadata: metadata || {} })
         });
 
         if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
