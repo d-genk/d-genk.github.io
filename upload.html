@@ -148,13 +148,8 @@
     </label>
   </div>  
   <div style="margin: 1rem 0; display: flex; align-items: center; gap: 1rem;">
-    <label for="maintain-linebreaks-toggle" id="maintain-linebreaks-label" style="font-weight: normal; opacity: 0.5;">
-      Maintain Line Breaks:
-    </label>
-    <label class="switch" style="opacity: 0.5;" id="maintain-linebreaks-switch-label">
-      <input type="checkbox" id="maintain-linebreaks-toggle" checked disabled>
-      <span class="slider round"></span>
-    </label>
+    <label for="metadata-json" style="font-weight: bold;">Upload Metadata JSON (optional):</label>
+    <input type="file" id="metadata-json" accept=".json" />
   </div>
   <button id="start-upload-button" disabled>Start Upload</button>
   <button id="download-button" disabled>Download JSON</button>
@@ -175,11 +170,7 @@
     const statusEl = document.getElementById('status');
     const resultEl = document.getElementById('result');
 
-    const ACCEPTED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.tif', '.webp', '.pdf'];
-
-    const maintainLinebreaksToggle = document.getElementById('maintain-linebreaks-toggle');
-    const maintainLinebreaksLabel = document.getElementById('maintain-linebreaks-label');
-    const maintainLinebreaksSwitchLabel = document.getElementById('maintain-linebreaks-switch-label');
+    const ACCEPTED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.tif', '.webp', '.pdf'];    
 
     let selectedFiles = [];
     let lastResults = null;
@@ -250,9 +241,22 @@
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
       const steps = [];
-      const options = {
-        maintainLineBreaks: maintainLinebreaksToggle.checked
-      };
+      const metadataFileInput = document.getElementById('metadata-json');
+        let metadata = null;
+
+        if (metadataFileInput.files.length > 0) {
+          try {
+            const text = await metadataFileInput.files[0].text();
+            metadata = JSON.parse(text);
+          } catch (err) {
+            resultEl.textContent = 'Error reading metadata JSON: ' + err.message;
+            console.error(err);
+            processing = false;
+            fileButton.disabled = false;
+            dropZone.classList.remove('disabled');
+            return;
+          }
+        }
       if (document.getElementById('foliate-checkbox').checked) steps.push("foliate");
       if (document.getElementById('transcribe-checkbox').checked) steps.push("transcribe");
       if (document.getElementById('layout-checkbox').checked) steps.push("layout");
@@ -267,7 +271,7 @@
         const presignRes = await fetch(presignEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filenames, steps, description, options })
+          body: JSON.stringify({ filenames, steps, description, metadata })
         });
 
         if (!presignRes.ok) throw new Error(`Presign failed: ${presignRes.status}`);
@@ -432,43 +436,6 @@
         layoutCheckbox.checked = false;
       }
     });
-    layoutCheckbox.addEventListener('change', () => {
-      if (layoutCheckbox.checked) {
-        maintainLinebreaksToggle.checked = true;
-        maintainLinebreaksToggle.disabled = true;
-        maintainLinebreaksLabel.style.opacity = '0.5';
-        maintainLinebreaksSwitchLabel.style.opacity = '0.5';
-      } else {
-        // Only re-enable toggle if Transcribe is checked
-        if (transcribeCheckbox.checked) {
-          maintainLinebreaksToggle.disabled = false;
-          maintainLinebreaksLabel.style.opacity = '1';
-          maintainLinebreaksSwitchLabel.style.opacity = '1';
-        }
-        // If Transcribe is unchecked, leave it disabled (as normal)
-      }
-    });
-    
-    function updateMaintainLinebreaksState() {
-      if (layoutCheckbox.checked) {
-        maintainLinebreaksToggle.checked = true;
-        maintainLinebreaksToggle.disabled = true;
-        maintainLinebreaksLabel.style.opacity = '0.5';
-        maintainLinebreaksSwitchLabel.style.opacity = '0.5';
-      } else if (transcribeCheckbox.checked) {
-        maintainLinebreaksToggle.disabled = false;
-        maintainLinebreaksLabel.style.opacity = '1';
-        maintainLinebreaksSwitchLabel.style.opacity = '1';
-      } else {
-        maintainLinebreaksToggle.disabled = true;
-        maintainLinebreaksLabel.style.opacity = '0.5';
-        maintainLinebreaksSwitchLabel.style.opacity = '0.5';
-      }
-    }
-    transcribeCheckbox.addEventListener('change', updateMaintainLinebreaksState);
-    layoutCheckbox.addEventListener('change', updateMaintainLinebreaksState);
-    updateMaintainLinebreaksState(); // initial state
-
   </script>
 </body>
 </html>
