@@ -349,10 +349,12 @@
       selectedFiles = [];
       updateFileList();
       fileInput.value = '';
+      document.getElementById('metadata-json').value = '';
       processing = false;
       dropZone.classList.remove('disabled');
       fileButton.disabled = false;
     }
+
 
     function downloadJSON() {
       if (!lastResults) return;
