@@ -53,6 +53,39 @@
       display: none;
     }
 
+    /* New: file rows + remove button */
+    .file-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      padding: .2rem .25rem;
+      border-radius: 4px;
+    }
+    .file-row:hover {
+      background: #f3f3f3;
+    }
+    .file-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1 1 auto;
+    }
+    .remove-file {
+      flex: 0 0 auto;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #444;
+      border-radius: 4px;
+      padding: 0.15rem 0.4rem;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .remove-file:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+
     #status,
     #result {
       width: 100%;
@@ -205,6 +238,7 @@
       return ACCEPTED_EXTENSIONS.some(ext => lower.endsWith(ext));
     }
 
+    // UPDATED: render removable rows
     function updateFileList() {
       if (selectedFiles.length === 0) {
         fileListEl.style.display = 'block';
@@ -212,7 +246,12 @@
       } else {
         fileListEl.style.display = 'block';
         fileListEl.innerHTML = selectedFiles
-          .map(f => `<div>${f.relativePath || f.file.name}</div>`)
+          .map((f, idx) => `
+            <div class="file-row">
+              <span class="file-name" title="${(f.relativePath || f.file.name)}">${(f.relativePath || f.file.name)}</span>
+              <button class="remove-file" data-index="${idx}" aria-label="Remove ${f.relativePath || f.file.name}" ${processing ? 'disabled' : ''}>✕</button>
+            </div>
+          `)
           .join('');
       }
       startUploadButton.disabled = selectedFiles.length === 0 || processing;
@@ -238,25 +277,25 @@
       statusEl.textContent = '';
       resultEl.textContent = '';
       lastResults = null;
+      updateFileList(); // reflect disabled remove buttons
 
       const filenames = selectedFiles.map(f => f.relativePath || f.file.name);
       const steps = [];
       const metadataFileInput = document.getElementById('metadata-json');
-        let metadata = null;
+      let metadata = null;
 
-        if (metadataFileInput.files.length > 0) {
-          try {
-            const text = await metadataFileInput.files[0].text();
-            metadata = JSON.parse(text);
-          } catch (err) {
-            resultEl.textContent = 'Error reading metadata JSON: ' + err.message;
-            console.error(err);
-            processing = false;
-            fileButton.disabled = false;
-            dropZone.classList.remove('disabled');
-            return;
-          }
+      if (metadataFileInput.files.length > 0) {
+        try {
+          const text = await metadataFileInput.files[0].text();
+          metadata = JSON.parse(text);
+        } catch (err) {
+          resultEl.textContent = 'Error reading metadata JSON: ' + err.message;
+          console.error(err);
+          // IMPORTANT: clear UI even for early-stage errors
+          resetUploadUI();
+          return;
         }
+      }
       if (document.getElementById('foliate-checkbox').checked) steps.push("foliate");
       if (document.getElementById('transcribe-checkbox').checked) steps.push("transcribe");
       if (document.getElementById('layout-checkbox').checked) steps.push("layout");
@@ -310,9 +349,8 @@
         statusEl.textContent = '';
         resultEl.textContent = 'Error: ' + err.message;
         console.error(err);
-        processing = false;
-        fileButton.disabled = false;
-        dropZone.classList.remove('disabled');
+        // IMPORTANT: clear selection regardless of where the error happened
+        resetUploadUI();
       }
     }
 
@@ -353,8 +391,8 @@
       processing = false;
       dropZone.classList.remove('disabled');
       fileButton.disabled = false;
+      startUploadButton.disabled = true;
     }
-
 
     function downloadJSON() {
       if (!lastResults) return;
@@ -414,6 +452,17 @@
       addFiles(flatFiles);
     });
 
+    // NEW: event delegation to remove individual files
+    fileListEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.remove-file');
+      if (!btn) return;
+      const idx = Number(btn.dataset.index);
+      if (Number.isInteger(idx) && idx >= 0 && idx < selectedFiles.length) {
+        selectedFiles.splice(idx, 1);
+        updateFileList();
+      }
+    });
+
     // Checkbox enable/disable logic
     const foliateCheckbox = document.getElementById('foliate-checkbox');
     const metadataCheckbox = document.getElementById('metadata-checkbox');
@@ -438,6 +487,9 @@
         layoutCheckbox.checked = false;
       }
     });
+
+    // Initial placeholder
+    updateFileList();
   </script>
 </body>
 </html>
