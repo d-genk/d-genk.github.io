@@ -50,7 +50,46 @@
       font-family: monospace;
       white-space: pre-wrap;
       word-break: break-word;
-      display: none;      
+      display: none;
+      line-height: 1;
+    }
+
+    /* Ultra-compact rows */
+    .file-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0.25rem;  /* minimal horizontal padding, no vertical */
+      gap: 0;              /* no horizontal gap inflation */
+    }
+
+    .file-row:hover {
+      background: #f3f3f3;
+    }
+
+    .file-name {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .remove-file {
+      border: none;
+      background: transparent;
+      color: #888;
+      padding: 0;           /* no extra box space */
+      margin: 0;
+      font-size: 0.9em;
+      line-height: 1;       /* doesn’t stretch row */
+      cursor: pointer;
+    }
+    .remove-file:hover {
+      color: #d00;
+    }
+    .remove-file:disabled {
+      opacity: .6;
+      cursor: not-allowed;
     }
 
     #status,
