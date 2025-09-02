@@ -51,46 +51,47 @@
       white-space: pre-wrap;
       word-break: break-word;
       display: none;
-      line-height: 1;
     }
 
-    /* Ultra-compact rows */
+    /* New: file rows + remove button */
     .file-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 0.25rem;  /* minimal horizontal padding, no vertical */
-      gap: 0;              /* no horizontal gap inflation */
+      gap: .5rem;
+      padding: .2rem .25rem;
+      border-radius: 4px;
     }
-
     .file-row:hover {
       background: #f3f3f3;
     }
-
     .file-name {
-      flex: 1 1 auto;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      flex: 1 1 auto;
     }
 
+    /* Reset button so it doesn’t stretch the row */
     .remove-file {
-      border: none;
-      background: transparent;
-      color: #888;
-      padding: 0;           /* no extra box space */
+      appearance: none;
+      -webkit-appearance: none;
+      border: 0;
+      padding: 0;                /* remove UA padding */
       margin: 0;
-      font-size: 0.9em;
-      line-height: 1;       /* doesn’t stretch row */
+      background: transparent;
+      font: inherit;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1rem;               /* compact fixed box */
+      height: 1rem;
       cursor: pointer;
+      color: #888;
     }
-    .remove-file:hover {
-      color: #d00;
-    }
-    .remove-file:disabled {
-      opacity: .6;
-      cursor: not-allowed;
-    }
+    .remove-file:hover { color: #d00; }
+    .remove-file:disabled { opacity: .6; cursor: not-allowed; }
 
     #status,
     #result {
