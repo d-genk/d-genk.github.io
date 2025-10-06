@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>IIIF Region Annotation Demo (Improved)</title>
+  <title>IIIF Region Annotation Demo (Rect + SVG + Canvas Picker)</title>
   <style>
     body { background: #23272f; color: #eee; font-family: sans-serif; margin: 0; }
-    #loader-bar { background: #20222a; padding: 1em 2em; display: flex; gap: 1em; align-items: center; border-bottom: 1px solid #333; }
-    #manifest-input { flex: 1; min-width: 340px; font-size: 1em; padding: 0.4em 0.7em; border-radius: 4px; border: 1px solid #555; background: #181818; color: #fff; }
-    #load-btn { padding: 0.5em 1.2em; font-size: 1em; border-radius: 4px; border: none; background: #378cff; color: #fff; cursor: pointer; transition: background 0.2s; }
-    #load-btn:hover { background: #2265c7; }
+    #loader-bar { background: #20222a; padding: 1em 2em; display: flex; gap: 1em; align-items: center; border-bottom: 1px solid #333; flex-wrap: wrap; }
+    #manifest-input { flex: 1 1 380px; min-width: 320px; font-size: 1em; padding: 0.4em 0.7em; border-radius: 4px; border: 1px solid #555; background: #181818; color: #fff; }
+    #load-btn, #reload-btn { padding: 0.5em 1.2em; font-size: 1em; border-radius: 4px; border: none; background: #378cff; color: #fff; cursor: pointer; transition: background 0.2s; }
+    #load-btn:hover, #reload-btn:hover { background: #2265c7; }
+    #canvas-select { min-width: 260px; font-size: 1em; padding: 0.45em 0.7em; border-radius: 4px; border: 1px solid #555; background: #181818; color: #fff; }
     #viewer-container { display: flex; }
     #canvas-holder { position: relative; background: #111; flex: 1 1 auto; height: 85vh; display: flex; justify-content: center; align-items: center; min-width: 400px; }
     #iiif-canvas { box-shadow: 0 0 20px #0008; background: #111; max-width: 98vw; max-height: 84vh; }
-    .overlay-region { position: absolute; border: 2px solid #3fc1ff; background: rgba(63,193,255,0.15); cursor: pointer; transition: border 0.1s, background 0.1s; pointer-events: auto; }
-    .overlay-region.active { border: 2px solid #ffcb6b; background: rgba(255,203,107,0.20); z-index: 2; }
+    #overlay-svg { position: absolute; left: 0; top: 0; pointer-events: none; }
+    .shape { fill: rgba(63,193,255,0.15); stroke: #3fc1ff; stroke-width: 2; pointer-events: auto; cursor: pointer; transition: stroke 0.1s, fill 0.1s; }
+    .shape.active { fill: rgba(255,203,107,0.20); stroke: #ffcb6b; }
     #sidebar { width: 350px; background: #1a1c23; border-left: 1px solid #29303a; min-height: 85vh; padding: 1.5em 1em; font-size: 1.04em; line-height: 1.5; display: flex; flex-direction: column; }
     #sidebar h3 { color: #ffd866; margin-top: 0; }
     #annotation-text { margin-top: 1.5em; white-space: pre-line; }
@@ -29,157 +31,229 @@
     <label for="manifest-input" style="font-weight:bold;">IIIF Manifest URL:</label>
     <input id="manifest-input" type="text" placeholder="Paste IIIF Manifest URL here" />
     <button id="load-btn">Load Manifest</button>
+    <select id="canvas-select" title="Choose a canvas" style="display:none;"></select>
+    <button id="reload-btn" title="Reload current canvas" style="display:none;">Reload</button>
   </div>
+
   <div id="viewer-container">
     <div id="canvas-holder">
       <canvas id="iiif-canvas"></canvas>
-      <!-- overlays dynamically inserted here -->
+      <svg id="overlay-svg"></svg>
     </div>
     <div id="sidebar">
       <h3>Annotation</h3>
-      <div id="annotation-text">Click a highlighted region to view its text here.</div>
+      <div id="annotation-text">Load a manifest to begin.</div>
     </div>
   </div>
 
   <script>
     const manifestInput = document.getElementById('manifest-input');
     const loadBtn = document.getElementById('load-btn');
+    const reloadBtn = document.getElementById('reload-btn');
+    const canvasSelect = document.getElementById('canvas-select');
+
     const canvasElem = document.getElementById('iiif-canvas');
     const canvasHolder = document.getElementById('canvas-holder');
+    const overlaySvg = document.getElementById('overlay-svg');
     const annotationText = document.getElementById('annotation-text');
 
-    let overlays = [];
+    let manifest = null;
     let imageInfo = null;
     let annotationRegions = [];
+    let overlayElems = [];
 
-    loadBtn.onclick = async function() {
+    loadBtn.onclick = async () => {
       const url = manifestInput.value.trim();
       if (!url) return alert('Paste a IIIF manifest URL!');
       try {
-        await loadManifest(url);
+        annotationText.innerText = "Loading manifest...";
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Manifest fetch failed (${res.status})`);
+        manifest = await res.json();
+        populateCanvasSelect(manifest);
+        canvasSelect.style.display = 'inline-block';
+        reloadBtn.style.display = 'inline-block';
+        await renderCanvasByIndex(0);
       } catch (e) {
-        annotationText.innerText = "Failed to load manifest or image:\n" + (e.message || e);
+        annotationText.innerText = "Failed to load manifest:\n" + (e.message || e);
       }
     };
 
-    async function loadManifest(manifestUrl) {
+    canvasSelect.onchange = async () => {
+      const idx = parseInt(canvasSelect.value, 10) || 0;
+      await renderCanvasByIndex(idx);
+    };
+
+    reloadBtn.onclick = async () => {
+      const idx = parseInt(canvasSelect.value, 10) || 0;
+      await renderCanvasByIndex(idx);
+    };
+
+    function populateCanvasSelect(man) {
+      canvasSelect.innerHTML = "";
+      const items = Array.isArray(man.items) ? man.items : [];
+      items.forEach((c, i) => {
+        const opt = document.createElement('option');
+        opt.value = String(i);
+        opt.textContent = labelToString(c.label) || `Canvas ${i+1}`;
+        canvasSelect.appendChild(opt);
+      });
+      if (!items.length) {
+        const opt = document.createElement('option');
+        opt.value = "0";
+        opt.textContent = "(no canvases)";
+        canvasSelect.appendChild(opt);
+      }
+    }
+
+    async function renderCanvasByIndex(index) {
+      if (!manifest || !Array.isArray(manifest.items) || !manifest.items.length) {
+        annotationText.innerText = "Manifest has no canvases.";
+        return;
+      }
+      const canvas = manifest.items[index];
+      if (!canvas) return;
+
+      canvasSelect.value = String(index);
+
       clearViewer();
-      annotationText.innerText = "Loading manifest...";
-      const response = await fetch(manifestUrl);
-      if (!response.ok) throw new Error("Manifest fetch failed.");
-      const manifest = await response.json();
+      annotationText.innerText = "Loading image...";
 
-      // Use first canvas for this demo
-      const canvas = (manifest.items && manifest.items[0]) || null;
-      if (!canvas) throw new Error("No canvas found in manifest.");
+      imageInfo = { width: canvas.width, height: canvas.height, canvasId: canvas.id };
 
-      imageInfo = { width: canvas.width, height: canvas.height };
-
-      // Find painting annotation
+      // find painting image
       const paintingPage = canvas.items && canvas.items[0];
       const paintingAnno = paintingPage && paintingPage.items && paintingPage.items.find(a => getMotivations(a).includes("painting"));
       const imageUrl = paintingAnno && paintingAnno.body && (paintingAnno.body.id || paintingAnno.body['@id']);
-      if (!imageUrl) throw new Error("No painting annotation/image found.");
+      if (!imageUrl) {
+        annotationText.innerText = "No painting annotation/image found for this canvas.";
+        return;
+      }
 
       await drawImageOnCanvas(imageUrl, imageInfo.width, imageInfo.height);
 
-      // Parse region annotations (support compact and expanded target syntaxes)
+      // parse region annotations
       annotationRegions = [];
       if (Array.isArray(canvas.annotations)) {
         for (const page of canvas.annotations) {
           if (!page || !Array.isArray(page.items)) continue;
           for (const anno of page.items) {
-            // We’ll accept supplementing/commenting/tagging as “region-ish” annotations
             const motives = getMotivations(anno);
             if (!motives.some(m => ["supplementing","commenting","tagging"].includes(m))) continue;
 
-            const rect = parseTargetToRect(anno.target, canvas.id);
-            if (!rect) continue;
+            const shape = parseTargetToShape(anno.target, canvas.id);
+            if (!shape) continue;
 
             const text = extractTextFromBody(anno.body);
-            annotationRegions.push({ ...rect, text, annoId: anno.id || "" });
+            annotationRegions.push({ ...shape, text, annoId: anno.id || "" });
           }
         }
       }
 
       drawOverlays();
       annotationText.innerText = "Click a highlighted region to view its text here.";
-      window.onresize = () => { redrawOverlaysOnly(); }
+      window.onresize = () => layoutOverlay();
     }
 
-    // ---- Helpers ----
+    // ---------- helpers ----------
+    function labelToString(labelObj) {
+      if (!labelObj || typeof labelObj !== 'object') return "";
+      const langKeys = Object.keys(labelObj);
+      if (!langKeys.length) return "";
+      const first = labelObj[langKeys[0]];
+      if (Array.isArray(first) && first.length) return first[0];
+      return "";
+    }
 
-    // Accept motivation as string or array; normalize to array of strings
     function getMotivations(a) {
       if (!a || !a.motivation) return [];
       return Array.isArray(a.motivation) ? a.motivation : [a.motivation];
     }
 
-    // Extract displayable text from annotation body (object or array)
     function extractTextFromBody(body) {
       if (!body) return "(no text)";
       const bodies = Array.isArray(body) ? body : [body];
-
-      // Prefer first TextualBody with a value
       for (const b of bodies) {
         if (b && (b.type === "TextualBody" || b.type === "cnt:ContentAsText") && typeof b.value === "string" && b.value.length) {
           return b.value;
         }
       }
-      // Fallback: try value if present
-      for (const b of bodies) {
-        if (b && typeof b.value === "string" && b.value.length) return b.value;
-      }
-      // Fallback: JSON-stringify the first body
+      for (const b of bodies) if (b && typeof b.value === "string" && b.value.length) return b.value;
       try { return JSON.stringify(bodies[0]); } catch { return "(no text)"; }
     }
 
-    // Parse either compact target string "canvas#xywh=..." OR expanded object with FragmentSelector
-    // Returns {x,y,w,h} in pixel coords, or null if not rectangular.
-    function parseTargetToRect(target, expectedCanvasId) {
+    // Rect + SvgSelector parser
+    function parseTargetToShape(target, expectedCanvasId) {
       if (!target) return null;
 
-      // Compact string form: "<canvas-id>#xywh=..."
+      // Compact "#xywh"
       if (typeof target === "string") {
         const m = /#xywh(?:=pixel)?:([0-9]+),([0-9]+),([0-9]+),([0-9]+)/.exec(target);
-        if (m) {
-          // Optionally ensure the base matches this canvas
-          if (expectedCanvasId && !target.startsWith(expectedCanvasId)) {
-            // still allow if the fragment matches; comment this out if you want strict canvas match
-          }
-          return { x: +m[1], y: +m[2], w: +m[3], h: +m[4] };
-        }
-        return null; // Not a rect we can draw
+        if (m) return { kind: 'rect', coords: { x:+m[1], y:+m[2], w:+m[3], h:+m[4] } };
+        return null;
       }
 
-      // Expanded form: { source: <canvas>, selector: { type: "FragmentSelector", value: "xywh[=pixel]:x,y,w,h" } }
       if (typeof target === "object") {
-        const src = target.source || target.id || target['@id'] || "";
         const sel = target.selector || null;
 
-        if (sel && typeof sel === "object") {
-          // FragmentSelector
-          if ((sel.type === "FragmentSelector" || sel.type === "Fragment") && typeof sel.value === "string") {
-            const m = /xywh(?:=pixel)?:([0-9]+),([0-9]+),([0-9]+),([0-9]+)/.exec(sel.value);
-            if (m) return { x: +m[1], y: +m[2], w: +m[3], h: +m[4] };
-          }
-          // SvgSelector — not rendered here; could be added later by parsing SVG and drawing polygons
-          if (sel.type === "SvgSelector" && typeof sel.value === "string") {
-            // TODO: parse SVG polygon/polyline to draw outlines if desired
+        if (sel && typeof sel === "object" && (sel.type === "FragmentSelector" || sel.type === "Fragment") && typeof sel.value === "string") {
+          const m = /xywh(?:=pixel)?:([0-9]+),([0-9]+),([0-9]+),([0-9]+)/.exec(sel.value);
+          if (m) return { kind: 'rect', coords: { x:+m[1], y:+m[2], w:+m[3], h:+m[4] } };
+        }
+
+        if (sel && typeof sel === "object" && sel.type === "SvgSelector" && typeof sel.value === "string") {
+          try {
+            const svgDoc = new DOMParser().parseFromString(sel.value, "image/svg+xml");
+
+            // Optional rotate on group
+            let rotateDeg = 0;
+            const g = svgDoc.querySelector('g[transform^="rotate"]');
+            if (g) {
+              const rm = /rotate\(([-0-9.]+)\s+[0-9.]+\s+[0-9.]+\)/.exec(g.getAttribute('transform') || "");
+              if (rm) rotateDeg = parseFloat(rm[1]) || 0;
+            }
+
+            const polygon = svgDoc.querySelector('polygon');
+            if (polygon && polygon.hasAttribute('points')) {
+              const pts = polygon.getAttribute('points').trim().split(/\s+/).map(p => p.split(',').map(Number));
+              return { kind: 'polygon', coords: pts };
+            }
+
+            const polyline = svgDoc.querySelector('polyline');
+            if (polyline && polyline.hasAttribute('points')) {
+              const pts = polyline.getAttribute('points').trim().split(/\s+/).map(p => p.split(',').map(Number));
+              return { kind: 'polyline', coords: pts };
+            }
+
+            const circle = svgDoc.querySelector('circle');
+            if (circle && circle.hasAttribute('cx')) {
+              return { kind: 'circle', coords: { cx: +circle.getAttribute('cx'), cy: +circle.getAttribute('cy'), r: +circle.getAttribute('r') } };
+            }
+
+            const ellipse = svgDoc.querySelector('ellipse');
+            if (ellipse && ellipse.hasAttribute('cx')) {
+              const cx = +ellipse.getAttribute('cx'), cy = +ellipse.getAttribute('cy');
+              const rx = +ellipse.getAttribute('rx'), ry = +ellipse.getAttribute('ry');
+              return { kind: 'ellipse', coords: { cx, cy, rx, ry, rotateDeg } };
+            }
+
+            return null;
+          } catch {
             return null;
           }
         }
 
-        // Some producers embed the fragment directly into the source as a string with '#xywh'
+        const src = target.source || target.id || target['@id'] || "";
         if (typeof src === "string") {
           const m2 = /#xywh(?:=pixel)?:([0-9]+),([0-9]+),([0-9]+),([0-9]+)/.exec(src);
-          if (m2) return { x: +m2[1], y: +m2[2], w: +m2[3], h: +m2[4] };
+          if (m2) return { kind: 'rect', coords: { x:+m2[1], y:+m2[2], w:+m2[3], h:+m2[4] } };
         }
       }
 
       return null;
     }
 
+    // Drawing & layout
     function drawImageOnCanvas(imgUrl, imgW, imgH) {
       return new Promise((resolve, reject) => {
         const img = new window.Image();
@@ -200,6 +274,8 @@
           imageInfo.displayWidth = dispW;
           imageInfo.displayHeight = dispH;
           imageInfo.scale = scale;
+
+          layoutOverlay();
           resolve();
         };
         img.onerror = reject;
@@ -207,58 +283,88 @@
       });
     }
 
+    function layoutOverlay() {
+      if (!imageInfo) return;
+      const rect = canvasElem.getBoundingClientRect();
+      const holderRect = canvasHolder.getBoundingClientRect();
+      const left = rect.left - holderRect.left;
+      const top = rect.top - holderRect.top;
+
+      overlaySvg.style.left = left + "px";
+      overlaySvg.style.top = top + "px";
+      overlaySvg.setAttribute('width', imageInfo.displayWidth || 0);
+      overlaySvg.setAttribute('height', imageInfo.displayHeight || 0);
+      overlaySvg.setAttribute('viewBox', `0 0 ${imageInfo.displayWidth || 0} ${imageInfo.displayHeight || 0}`);
+
+      drawOverlays();
+    }
+
     function clearViewer() {
-      overlays.forEach(div => div.remove());
-      overlays = [];
+      overlayElems.forEach(el => el.remove());
+      overlayElems = [];
       annotationRegions = [];
       annotationText.innerText = "";
+      overlaySvg.innerHTML = "";
     }
 
     function drawOverlays() {
-      overlays.forEach(div => div.remove());
-      overlays = [];
+      overlaySvg.innerHTML = "";
+      overlayElems = [];
+      const scale = imageInfo.scale || 1;
 
       annotationRegions.forEach((region) => {
-        const div = document.createElement('div');
-        div.className = 'overlay-region';
-        const scale = imageInfo.scale || 1;
-        const offsetX = canvasElem.offsetLeft;
-        const offsetY = canvasElem.offsetTop;
-        div.style.left = (region.x * scale + offsetX) + "px";
-        div.style.top = (region.y * scale + offsetY) + "px";
-        div.style.width = (region.w * scale) + "px";
-        div.style.height = (region.h * scale) + "px";
-        div.title = "Click to view text";
-        div.onclick = function(e) {
-          overlays.forEach(o => o.classList.remove('active'));
-          div.classList.add('active');
-          annotationText.innerText = region.text || "(no text)";
+        let el = null;
+        if (region.kind === 'rect') {
+          const {x,y,w,h} = region.coords;
+          el = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+          el.setAttribute('x', x * scale);
+          el.setAttribute('y', y * scale);
+          el.setAttribute('width', w * scale);
+          el.setAttribute('height', h * scale);
+        } else if (region.kind === 'polygon' || region.kind === 'polyline') {
+          const tag = region.kind;
+          el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+          const pts = region.coords.map(([px,py]) => `${px*scale},${py*scale}`).join(' ');
+          el.setAttribute('points', pts);
+        } else if (region.kind === 'circle') {
+          const {cx, cy, r} = region.coords;
+          el = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          el.setAttribute('cx', cx * scale);
+          el.setAttribute('cy', cy * scale);
+          el.setAttribute('r', r * scale);
+        } else if (region.kind === 'ellipse') {
+          const {cx, cy, rx, ry, rotateDeg} = region.coords;
+          el = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+          el.setAttribute('cx', cx * scale);
+          el.setAttribute('cy', cy * scale);
+          el.setAttribute('rx', rx * scale);
+          el.setAttribute('ry', ry * scale);
+          if (rotateDeg && Math.abs(rotateDeg) > 0.0001) {
+            el.setAttribute('transform', `rotate(${rotateDeg} ${cx*scale} ${cy*scale})`);
+          }
+        } else {
+          return;
+        }
+
+        el.classList.add('shape');
+        el.addEventListener('click', (e) => {
           e.stopPropagation();
-        };
-        canvasHolder.appendChild(div);
-        overlays.push(div);
+          overlayElems.forEach(o => o.classList.remove('active'));
+          el.classList.add('active');
+          annotationText.innerText = region.text || "(no text)";
+        });
+
+        overlaySvg.appendChild(el);
+        overlayElems.push(el);
       });
 
+      // click-away to clear
       canvasHolder.onclick = function(e) {
-        if (e.target === canvasElem || e.target === canvasHolder) {
-          overlays.forEach(o => o.classList.remove('active'));
+        if (e.target === canvasElem || e.target === canvasHolder || e.target === overlaySvg) {
+          overlayElems.forEach(o => o.classList.remove('active'));
           annotationText.innerText = "Click a highlighted region to view its text here.";
         }
       };
-    }
-
-    function redrawOverlaysOnly() {
-      if (!imageInfo || !annotationRegions.length) return;
-      overlays.forEach((div, idx) => {
-        const region = annotationRegions[idx];
-        const scale = imageInfo.scale || 1;
-        const offsetX = canvasElem.offsetLeft;
-        const offsetY = canvasElem.offsetTop;
-        div.style.left = (region.x * scale + offsetX) + "px";
-        div.style.top = (region.y * scale + offsetY) + "px";
-        div.style.width = (region.w * scale) + "px";
-        div.style.height = (region.h * scale) + "px";
-      });
     }
   </script>
 </body>
