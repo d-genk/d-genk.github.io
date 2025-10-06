@@ -5,39 +5,16 @@
   <title>IIIF Region Annotation Demo (Improved)</title>
   <style>
     body { background: #23272f; color: #eee; font-family: sans-serif; margin: 0; }
-    #loader-bar {
-      background: #20222a; padding: 1em 2em; display: flex; gap: 1em; align-items: center; border-bottom: 1px solid #333;
-    }
+    #loader-bar { background: #20222a; padding: 1em 2em; display: flex; gap: 1em; align-items: center; border-bottom: 1px solid #333; }
     #manifest-input { flex: 1; min-width: 340px; font-size: 1em; padding: 0.4em 0.7em; border-radius: 4px; border: 1px solid #555; background: #181818; color: #fff; }
     #load-btn { padding: 0.5em 1.2em; font-size: 1em; border-radius: 4px; border: none; background: #378cff; color: #fff; cursor: pointer; transition: background 0.2s; }
     #load-btn:hover { background: #2265c7; }
     #viewer-container { display: flex; }
     #canvas-holder { position: relative; background: #111; flex: 1 1 auto; height: 85vh; display: flex; justify-content: center; align-items: center; min-width: 400px; }
     #iiif-canvas { box-shadow: 0 0 20px #0008; background: #111; max-width: 98vw; max-height: 84vh; }
-    .overlay-region {
-      position: absolute;
-      border: 2px solid #3fc1ff;
-      background: rgba(63,193,255,0.15);
-      cursor: pointer;
-      transition: border 0.1s, background 0.1s;
-      pointer-events: auto;
-    }
-    .overlay-region.active {
-      border: 2px solid #ffcb6b;
-      background: rgba(255,203,107,0.20);
-      z-index: 2;
-    }
-    #sidebar {
-      width: 350px;
-      background: #1a1c23;
-      border-left: 1px solid #29303a;
-      min-height: 85vh;
-      padding: 1.5em 1em;
-      font-size: 1.04em;
-      line-height: 1.5;
-      display: flex;
-      flex-direction: column;
-    }
+    .overlay-region { position: absolute; border: 2px solid #3fc1ff; background: rgba(63,193,255,0.15); cursor: pointer; transition: border 0.1s, background 0.1s; pointer-events: auto; }
+    .overlay-region.active { border: 2px solid #ffcb6b; background: rgba(255,203,107,0.20); z-index: 2; }
+    #sidebar { width: 350px; background: #1a1c23; border-left: 1px solid #29303a; min-height: 85vh; padding: 1.5em 1em; font-size: 1.04em; line-height: 1.5; display: flex; flex-direction: column; }
     #sidebar h3 { color: #ffd866; margin-top: 0; }
     #annotation-text { margin-top: 1.5em; white-space: pre-line; }
     @media (max-width: 950px) {
@@ -63,6 +40,7 @@
       <div id="annotation-text">Click a highlighted region to view its text here.</div>
     </div>
   </div>
+
   <script>
     const manifestInput = document.getElementById('manifest-input');
     const loadBtn = document.getElementById('load-btn');
@@ -87,48 +65,119 @@
     async function loadManifest(manifestUrl) {
       clearViewer();
       annotationText.innerText = "Loading manifest...";
-      // Fetch IIIF manifest
       const response = await fetch(manifestUrl);
       if (!response.ok) throw new Error("Manifest fetch failed.");
       const manifest = await response.json();
-      // Assume first canvas for demo
-      const canvas = manifest.items && manifest.items[0];
+
+      // Use first canvas for this demo
+      const canvas = (manifest.items && manifest.items[0]) || null;
       if (!canvas) throw new Error("No canvas found in manifest.");
-      imageInfo = {
-        width: canvas.width,
-        height: canvas.height
-      };
+
+      imageInfo = { width: canvas.width, height: canvas.height };
+
       // Find painting annotation
       const paintingPage = canvas.items && canvas.items[0];
-      const paintingAnno = paintingPage && paintingPage.items && paintingPage.items.find(a => a.motivation === "painting");
-      const imageUrl = paintingAnno && paintingAnno.body && paintingAnno.body.id;
+      const paintingAnno = paintingPage && paintingPage.items && paintingPage.items.find(a => getMotivations(a).includes("painting"));
+      const imageUrl = paintingAnno && paintingAnno.body && (paintingAnno.body.id || paintingAnno.body['@id']);
       if (!imageUrl) throw new Error("No painting annotation/image found.");
-      // Draw image on canvas, then overlays after image is loaded
+
       await drawImageOnCanvas(imageUrl, imageInfo.width, imageInfo.height);
-      // Find region annotations (motivation: supplementing)
+
+      // Parse region annotations (support compact and expanded target syntaxes)
       annotationRegions = [];
-      if (canvas.annotations && Array.isArray(canvas.annotations)) {
+      if (Array.isArray(canvas.annotations)) {
         for (const page of canvas.annotations) {
-          if (!page.items) continue;
+          if (!page || !Array.isArray(page.items)) continue;
           for (const anno of page.items) {
-            if (anno.motivation === "supplementing" && anno.target && anno.body && anno.body.value) {
-              const xywhMatch = /#xywh=(\d+),(\d+),(\d+),(\d+)/.exec(anno.target);
-              if (xywhMatch) {
-                annotationRegions.push({
-                  x: +xywhMatch[1], y: +xywhMatch[2],
-                  w: +xywhMatch[3], h: +xywhMatch[4],
-                  text: anno.body.value,
-                  annoId: anno.id
-                });
-              }
-            }
+            // We’ll accept supplementing/commenting/tagging as “region-ish” annotations
+            const motives = getMotivations(anno);
+            if (!motives.some(m => ["supplementing","commenting","tagging"].includes(m))) continue;
+
+            const rect = parseTargetToRect(anno.target, canvas.id);
+            if (!rect) continue;
+
+            const text = extractTextFromBody(anno.body);
+            annotationRegions.push({ ...rect, text, annoId: anno.id || "" });
           }
         }
       }
+
       drawOverlays();
       annotationText.innerText = "Click a highlighted region to view its text here.";
-      // Make overlays responsive to window resize
       window.onresize = () => { redrawOverlaysOnly(); }
+    }
+
+    // ---- Helpers ----
+
+    // Accept motivation as string or array; normalize to array of strings
+    function getMotivations(a) {
+      if (!a || !a.motivation) return [];
+      return Array.isArray(a.motivation) ? a.motivation : [a.motivation];
+    }
+
+    // Extract displayable text from annotation body (object or array)
+    function extractTextFromBody(body) {
+      if (!body) return "(no text)";
+      const bodies = Array.isArray(body) ? body : [body];
+
+      // Prefer first TextualBody with a value
+      for (const b of bodies) {
+        if (b && (b.type === "TextualBody" || b.type === "cnt:ContentAsText") && typeof b.value === "string" && b.value.length) {
+          return b.value;
+        }
+      }
+      // Fallback: try value if present
+      for (const b of bodies) {
+        if (b && typeof b.value === "string" && b.value.length) return b.value;
+      }
+      // Fallback: JSON-stringify the first body
+      try { return JSON.stringify(bodies[0]); } catch { return "(no text)"; }
+    }
+
+    // Parse either compact target string "canvas#xywh=..." OR expanded object with FragmentSelector
+    // Returns {x,y,w,h} in pixel coords, or null if not rectangular.
+    function parseTargetToRect(target, expectedCanvasId) {
+      if (!target) return null;
+
+      // Compact string form: "<canvas-id>#xywh=..."
+      if (typeof target === "string") {
+        const m = /#xywh(?:=pixel)?:([0-9]+),([0-9]+),([0-9]+),([0-9]+)/.exec(target);
+        if (m) {
+          // Optionally ensure the base matches this canvas
+          if (expectedCanvasId && !target.startsWith(expectedCanvasId)) {
+            // still allow if the fragment matches; comment this out if you want strict canvas match
+          }
+          return { x: +m[1], y: +m[2], w: +m[3], h: +m[4] };
+        }
+        return null; // Not a rect we can draw
+      }
+
+      // Expanded form: { source: <canvas>, selector: { type: "FragmentSelector", value: "xywh[=pixel]:x,y,w,h" } }
+      if (typeof target === "object") {
+        const src = target.source || target.id || target['@id'] || "";
+        const sel = target.selector || null;
+
+        if (sel && typeof sel === "object") {
+          // FragmentSelector
+          if ((sel.type === "FragmentSelector" || sel.type === "Fragment") && typeof sel.value === "string") {
+            const m = /xywh(?:=pixel)?:([0-9]+),([0-9]+),([0-9]+),([0-9]+)/.exec(sel.value);
+            if (m) return { x: +m[1], y: +m[2], w: +m[3], h: +m[4] };
+          }
+          // SvgSelector — not rendered here; could be added later by parsing SVG and drawing polygons
+          if (sel.type === "SvgSelector" && typeof sel.value === "string") {
+            // TODO: parse SVG polygon/polyline to draw outlines if desired
+            return null;
+          }
+        }
+
+        // Some producers embed the fragment directly into the source as a string with '#xywh'
+        if (typeof src === "string") {
+          const m2 = /#xywh(?:=pixel)?:([0-9]+),([0-9]+),([0-9]+),([0-9]+)/.exec(src);
+          if (m2) return { x: +m2[1], y: +m2[2], w: +m2[3], h: +m2[4] };
+        }
+      }
+
+      return null;
     }
 
     function drawImageOnCanvas(imgUrl, imgW, imgH) {
@@ -136,7 +185,6 @@
         const img = new window.Image();
         img.crossOrigin = "anonymous";
         img.onload = function() {
-          // Fit to window while preserving aspect
           let maxW = canvasHolder.clientWidth - 4;
           let maxH = canvasHolder.clientHeight - 4;
           let scale = Math.min(maxW / imgW, maxH / imgH, 1);
@@ -146,14 +194,12 @@
           canvasElem.height = dispH;
           canvasElem.style.width = dispW + "px";
           canvasElem.style.height = dispH + "px";
-          let ctx = canvasElem.getContext("2d");
+          const ctx = canvasElem.getContext("2d");
           ctx.clearRect(0,0,dispW,dispH);
           ctx.drawImage(img, 0, 0, dispW, dispH);
-          // Save display info
           imageInfo.displayWidth = dispW;
           imageInfo.displayHeight = dispH;
           imageInfo.scale = scale;
-          // Overlays will be positioned absolutely over the canvas
           resolve();
         };
         img.onerror = reject;
@@ -169,18 +215,13 @@
     }
 
     function drawOverlays() {
-      // Remove old overlays
       overlays.forEach(div => div.remove());
       overlays = [];
-      // For each region, create an absolutely positioned div over the canvas
-      annotationRegions.forEach((region, idx) => {
+
+      annotationRegions.forEach((region) => {
         const div = document.createElement('div');
         div.className = 'overlay-region';
         const scale = imageInfo.scale || 1;
-        // Place relative to the canvas's actual position in the holder
-        const rect = canvasElem.getBoundingClientRect();
-        const holderRect = canvasHolder.getBoundingClientRect();
-        // Calculate offsets relative to canvas-holder
         const offsetX = canvasElem.offsetLeft;
         const offsetY = canvasElem.offsetTop;
         div.style.left = (region.x * scale + offsetX) + "px";
@@ -191,13 +232,13 @@
         div.onclick = function(e) {
           overlays.forEach(o => o.classList.remove('active'));
           div.classList.add('active');
-          annotationText.innerText = region.text;
+          annotationText.innerText = region.text || "(no text)";
           e.stopPropagation();
         };
         canvasHolder.appendChild(div);
         overlays.push(div);
       });
-      // Click outside region clears selection
+
       canvasHolder.onclick = function(e) {
         if (e.target === canvasElem || e.target === canvasHolder) {
           overlays.forEach(o => o.classList.remove('active'));
@@ -206,7 +247,6 @@
       };
     }
 
-    // Redraw overlays only, for responsive resizing
     function redrawOverlaysOnly() {
       if (!imageInfo || !annotationRegions.length) return;
       overlays.forEach((div, idx) => {
