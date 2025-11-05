@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIA Annotated Image Viewer</title>
+  <style>
+    :root{
+      --stroke:#e11d48; /* rose-600 */
+      --stroke-hi:#7c3aed; /* violet-600 */
+      --fill: rgba(225,29,72,.18);
+      --fill-hi: rgba(124,58,237,.18);
+      --bg:#ffffff; --fg:#111827; --muted:#6b7280; --card:#f8fafc;
+    }
+    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 8px 12px 18px; }
+    header { display:flex; gap:.75rem; align-items:center; justify-content:space-between; margin: .25rem 0 .75rem; }
+    h1 { font-size: 1rem; margin:0; font-weight:600; }
+    .controls { display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }
+    .controls input[type="url"], .controls input[type="file"], .controls select { padding:.45rem .6rem; border:1px solid #d1d5db; border-radius:8px; font-size:.95rem; }
+    .btn { padding:.5rem .7rem; border:1px solid #d1d5db; border-radius:8px; background:#fff; cursor:pointer; }
+    .viewer { position: relative; display: inline-block; max-width: 100%; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,.08); background: #0001; }
+    .img { display:block; max-width:100%; height:auto; border-radius: 12px; }
+    .overlay { position:absolute; inset:0; width:100%; height:100%; pointer-events:auto; border-radius:12px; }
+    svg { width:100%; height:100%; display:block; }
+    .anno { fill: var(--fill); stroke: var(--stroke); stroke-width: 2; vector-effect: non-scaling-stroke; cursor: pointer; }
+    .anno:hover, .anno.active { fill: var(--fill-hi); stroke: var(--stroke-hi); }
+    polyline.anno { fill: none; }
+    circle.anno { fill: var(--fill); stroke-width: 2; }
+    .panel { margin-top: .75rem; display:grid; grid-template-columns: 1fr; gap:.5rem; }
+    .card { background: var(--card); border:1px solid #e5e7eb; border-radius: 10px; padding:.6rem .75rem; }
+    .list { display:grid; gap:.25rem; max-height: 220px; overflow:auto; }
+    .li { padding:.35rem .5rem; border-radius:8px; display:flex; gap:.5rem; align-items:center; cursor:pointer; }
+    .li:hover{ background:#eef2ff; }
+    .swatch { width:14px; height:14px; border-radius:3px; background:var(--fill); outline:2px solid var(--stroke); }
+    .li.active .swatch { background: var(--fill-hi); outline-color: var(--stroke-hi); }
+    .hint { color: var(--muted); font-size: .9rem; }
+    .tooltip { position:absolute; z-index:5; background:#111827; color:#fff; padding:.35rem .5rem; border-radius:6px; font-size:.85rem; transform: translate(-50%, -100%); pointer-events:none; white-space:nowrap; }
+    .hidden { display:none; }
+    .drop { display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:.85em; background:#f3f4f6; border:1px solid #e5e7eb; border-bottom-width:2px; border-radius:6px; padding:.1rem .35rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>VIA → StoryMaps Viewer</h1>
+      <div class="controls">
+        <input id="imgUrl" type="url" placeholder="Image URL (optional if VIA JSON names a file)" size="32" />
+        <input id="viaUrl" type="url" placeholder="VIA JSON URL" size="28" />
+        <select id="labelField">
+          <option value="label">label_field=label</option>
+          <option value="name">label_field=name</option>
+          <option value="">label_field=auto</option>
+        </select>
+        <select id="fileSelect"><option value="">image: (auto)</option></select>
+        <button class="btn" id="loadBtn">Open</button>
+      </div>
+    </header>
+
+    <div class="viewer" id="viewer">
+      <img id="base" class="img" alt="Annotated" />
+      <div class="overlay"><svg id="svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div id="tip" class="tooltip hidden"></div>
+    </div>
+
+    <div class="panel">
+      <div class="card">
+        <div class="hint">Click shapes on the image or entries below. Hover to highlight. Works great in an ArcGIS StoryMaps <em>Embed</em> block.</div>
+        <div class="list" id="list"></div>
+      </div>
+      <div class="card hint" id="meta"></div>
+    </div>
+
+    <div class="card" style="margin-top:.5rem">
+      <div class="drop">
+        <div>
+          <strong>Load locally</strong> → VIA JSON <input type="file" id="viaFile" accept="application/json" /> and image <input type="file" id="imgFile" accept="image/*" />
+        </div>
+        <div>URL params: <span class="kbd">?via=…&img=…&file=…&index=…&label_field=label</span></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+  // --- URL params ---
+  const qs = new URLSearchParams(location.search);
+  const viaParam = qs.get('via');
+  const imgParam = qs.get('img');
+  const labelParam = qs.get('label_field');
+  const fileParam = qs.get('file');
+  const indexParam = qs.get('index');
+
+  const els = {
+    img: document.getElementById('base'),
+    svg: document.getElementById('svg'),
+    viewer: document.getElementById('viewer'),
+    tip: document.getElementById('tip'),
+    list: document.getElementById('list'),
+    meta: document.getElementById('meta'),
+    viaUrl: document.getElementById('viaUrl'),
+    imgUrl: document.getElementById('imgUrl'),
+    labelField: document.getElementById('labelField'),
+    fileSelect: document.getElementById('fileSelect'),
+    viaFile: document.getElementById('viaFile'),
+    imgFile: document.getElementById('imgFile'),
+    loadBtn: document.getElementById('loadBtn')
+  };
+
+  if(labelParam){
+    Array.from(els.labelField.options).forEach(function(o){ if(o.value===labelParam){ o.selected=true; } });
+  }
+  if(viaParam) els.viaUrl.value = viaParam;
+  if(imgParam) els.imgUrl.value = imgParam;
+
+  // --- Helpers ---
+  function setTip(x, y, text){
+    if(!text){ els.tip.classList.add('hidden'); return; }
+    els.tip.textContent = text;
+    els.tip.style.left = x + 'px';
+    els.tip.style.top = y + 'px';
+    els.tip.classList.remove('hidden');
+  }
+  function clearTip(){ els.tip.classList.add('hidden'); }
+
+  function centroid(points){
+    var x=0,y=0; points.forEach(function(p){ x+=p[0]; y+=p[1]; });
+    var n = points.length || 1; return [x/n, y/n];
+  }
+
+  function circleToPolygon(cx, cy, r, steps){
+    steps = steps || 32; var pts=[]; var TAU=Math.PI*2; for(var i=0;i<steps;i++){ var a=i/steps*TAU; pts.push([cx + r*Math.cos(a), cy + r*Math.sin(a)]); } return pts;
+  }
+
+  function rectToPolygon(x,y,w,h){ return [[x,y],[x+w,y],[x+w,y+h],[x,y+h]]; }
+
+  function pointsAttr(points){ return points.map(function(p){ return p[0]+","+p[1]; }).join(' '); }
+
+  function pickLabel(region, fallback){
+    var prefer = (els.labelField.value || '').trim();
+    var attrs = region.region_attributes || region.attributes || {};
+    if(prefer && attrs && attrs[prefer]) return String(attrs[prefer]);
+    var keys = ['label','name','title','text','desc','description'];
+    for(var i=0;i<keys.length;i++){
+      var k = keys[i]; if(attrs && attrs[k]) return String(attrs[k]);
+    }
+    if(attrs && typeof attrs === 'object'){
+      var truthy = Object.keys(attrs).filter(function(k){ var v=attrs[k]; return v===true || (typeof v==='string' && v.trim()); }).map(function(k){ var v=attrs[k]; return (typeof v==='string')? v : k; });
+      if(truthy.length) return truthy.join(', ');
+    }
+    return fallback || '';
+  }
+
+  function normalizeVIA(json){
+    // Supports: VIA 2.x (_via_img_metadata), VIA 2.x compact object map, VIA 3 array, or simple { regions: [...] }
+    var images = [];
+    if(json && json._via_img_metadata){
+      images = Object.values(json._via_img_metadata).map(function(e){ return { filename: e.filename, size: e.size, file_attributes: e.file_attributes, regions: e.regions }; });
+    } else if (Array.isArray(json)){
+      images = json.map(function(e){ return { filename: e.filename || (e.file && e.file.filename), size: e.size, file_attributes: e.file_attributes || {}, regions: e.regions || e.metadata || [] }; });
+    } else if (json && json.regions){
+      images = [{ filename: json.filename || '', regions: json.regions, file_attributes: json.file_attributes || {} }];
+    } else if (json && typeof json === 'object'){
+      var vals = Object.values(json);
+      if (vals.length && vals.every(function(v){ return v && typeof v === 'object' && 'filename' in v && 'regions' in v; })){
+        images = vals.map(function(e){ return { filename: e.filename, size: e.size, file_attributes: e.file_attributes || {}, regions: e.regions || [] }; });
+      }
+    }
+    return images;
+  }
+
+  function render(ctx){
+    var imgNatural = ctx.imgNatural;
+    var regions = ctx.regions;
+    // set viewBox to image pixel space so VIA coords map 1:1
+    els.svg.setAttribute('viewBox', '0 0 ' + imgNatural.width + ' ' + imgNatural.height);
+    while(els.svg.firstChild){ els.svg.removeChild(els.svg.firstChild); }
+    els.list.innerHTML = '';
+
+    var items = regions.map(function(r, idx){
+      var sa = r.shape_attributes || r.shape || {};
+      var pts = [];
+      var type = sa.name || (sa.points ? 'polygon' : 'unknown');
+      var center = [0,0];
+      if(type === 'polygon' && Array.isArray(sa.all_points_x)){
+        pts = sa.all_points_x.map(function(x,i){ return [Number(x), Number(sa.all_points_y[i])]; });
+        center = centroid(pts);
+      } else if(type === 'rect'){
+        pts = rectToPolygon(Number(sa.x), Number(sa.y), Number(sa.width), Number(sa.height));
+        center = centroid(pts);
+      } else if(type === 'circle'){
+        pts = circleToPolygon(Number(sa.cx), Number(sa.cy), Number(sa.r));
+        center = [Number(sa.cx), Number(sa.cy)];
+      } else if(type === 'ellipse'){
+        var cx=Number(sa.cx), cy=Number(sa.cy), rx=Number(sa.rx||sa.r), ry=Number(sa.ry||sa.r);
+        var steps=40; var TAU=Math.PI*2; for(var i=0;i<steps;i++){ var a=i/steps*TAU; pts.push([cx + rx*Math.cos(a), cy + ry*Math.sin(a)]); }
+        center = [cx, cy];
+      } else if(type === 'polyline'){
+        if (Array.isArray(sa.all_points_x)) pts = sa.all_points_x.map(function(x,i){ return [Number(x), Number(sa.all_points_y[i])]; });
+        center = centroid(pts);
+      } else if(type === 'point'){
+        var pcx = Number(sa.cx), pcy = Number(sa.cy);
+        pts = [[pcx, pcy]]; // store as 1 point
+        center = [pcx, pcy];
+      } else if (sa.points){
+        pts = sa.points; center = centroid(pts); type = 'polygon';
+      }
+      var label = pickLabel(r, 'Region ' + (idx+1));
+      return { idx: idx, label: label, pts: pts, type: type, center: center, raw: r };
+    }).filter(function(x){
+      if (x.type === 'point') return true;
+      if (x.type === 'polyline') return x.pts && x.pts.length >= 2;
+      return x.pts && x.pts.length >= 3;
+    });
+
+    items.forEach(function(item){
+      var idx = item.idx, label = item.label, pts = item.pts, type = item.type, center = item.center;
+      var shapeEl;
+      if(type === 'polyline'){
+        shapeEl = document.createElementNS('http://www.w3.org/2000/svg','polyline');
+        shapeEl.setAttribute('points', pointsAttr(pts));
+      } else if(type === 'point'){
+        shapeEl = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        shapeEl.setAttribute('cx', String(center[0]));
+        shapeEl.setAttribute('cy', String(center[1]));
+        shapeEl.setAttribute('r', '6');
+      } else {
+        shapeEl = document.createElementNS('http://www.w3.org/2000/svg','polygon');
+        shapeEl.setAttribute('points', pointsAttr(pts));
+      }
+      shapeEl.setAttribute('class','anno');
+      shapeEl.dataset.index = String(idx);
+      els.svg.appendChild(shapeEl);
+
+      var li = document.createElement('div');
+      li.className = 'li';
+      li.dataset.index = String(idx);
+      li.innerHTML = '<span class="swatch"></span><span>' + escapeHtml(label) + '</span>';
+      els.list.appendChild(li);
+
+      var activate = function(on){
+        Array.from(els.svg.querySelectorAll('.anno')).forEach(function(e){ e.classList.remove('active'); });
+        Array.from(els.list.querySelectorAll('.li')).forEach(function(e){ e.classList.remove('active'); });
+        if(on){ shapeEl.classList.add('active'); li.classList.add('active'); }
+      };
+
+      shapeEl.addEventListener('mouseenter', function(){
+        activate(true);
+        var box = els.viewer.getBoundingClientRect();
+        var sx = box.width / imgNatural.width;
+        var sy = box.height / imgNatural.height;
+        setTip((center[0]*sx)+box.left, (center[1]*sy)+box.top - 6, label);
+      });
+      shapeEl.addEventListener('mousemove', function(ev){ setTip(ev.clientX, ev.clientY - 8, label); });
+      shapeEl.addEventListener('mouseleave', function(){ clearTip(); });
+      shapeEl.addEventListener('click', function(){ activate(true); });
+
+      li.addEventListener('mouseenter', function(){ shapeEl.dispatchEvent(new Event('mouseenter')); });
+      li.addEventListener('mouseleave', function(){ shapeEl.dispatchEvent(new Event('mouseleave')); });
+      li.addEventListener('click', function(){ shapeEl.dispatchEvent(new Event('click')); });
+    });
+
+    els.meta.innerHTML = '<strong>' + items.length + '</strong> region(s) • image <span class="kbd">' + imgNatural.width + '×' + imgNatural.height + '</span>';
+  }
+
+  function escapeHtml(s){
+    var map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    return String(s).replace(/[&<>"']/g, function(c){ return map[c]; });
+  }
+
+  async function loadFromUrls(viaUrl, imgUrl){
+    const viaResp = await fetch(viaUrl, { cache: 'no-store' });
+    if(!viaResp.ok) throw new Error('Failed to fetch VIA JSON');
+    const via = await viaResp.json();
+    const imgs = normalizeVIA(via);
+    if(imgs.length === 0) throw new Error('No VIA images found in JSON');
+
+    // Populate dropdown
+    els.fileSelect.innerHTML = '';
+    imgs.forEach(function(e, i){
+      const opt = document.createElement('option');
+      opt.value = String(i);
+      opt.textContent = (i+1) + '. ' + (e.filename || '(unnamed image)') + (e.regions ? (' — ' + e.regions.length + ' region(s)') : '');
+      els.fileSelect.appendChild(opt);
+    });
+
+    // Choose index: file=filename OR index=idx OR default 0
+    let chosenIndex = 0;
+    if (fileParam) {
+      const idx = imgs.findIndex(function(e){ const f=(e.filename||''); return f===fileParam || f.endsWith('/'+fileParam); });
+      if (idx >= 0) chosenIndex = idx;
+    }
+    if (indexParam !== null && indexParam !== undefined && !Number.isNaN(Number(indexParam))) {
+      const idx2 = Number(indexParam);
+      if (idx2 >=0 && idx2 < imgs.length) chosenIndex = idx2;
+    }
+
+    els.fileSelect.value = String(chosenIndex);
+
+    // Helper to render selected entry
+    const viaBase = new URL(viaUrl, location.href);
+    const renderSelected = async function(){
+      const i = Number(els.fileSelect.value || 0);
+      const chosen = imgs[i];
+      let imgHref = imgParam && imgParam.trim() ? imgParam.trim() : '';
+      if (!imgHref) {
+        if (chosen.filename) {
+          try { imgHref = new URL(chosen.filename, viaBase).toString(); } catch (e) { imgHref = chosen.filename; }
+        }
+      }
+      if (!imgHref) throw new Error('Provide ?img=… or include a filename in VIA JSON');
+
+      await loadImage(imgHref);
+      const regions = chosen.regions || [];
+      render({ imgUrl: imgHref, imgNatural: { width: els.img.naturalWidth, height: els.img.naturalHeight }, regions: regions });
+      const name = chosen.filename ? (' • file <span class="kbd">' + escapeHtml(chosen.filename) + '</span>') : '';
+      els.meta.innerHTML += name ? name : '';
+    };
+
+    await renderSelected();
+    els.fileSelect.onchange = function(){ renderSelected().catch(function(err){ alert(err.message); }); };
+  }
+
+  function loadImage(url){
+    return new Promise(function(resolve,reject){
+      els.img.onload = function(){ resolve(); };
+      els.img.onerror = function(){ reject(new Error('Image failed to load')); };
+      els.img.src = url;
+      els.img.alt = url.split('/').pop();
+    });
+  }
+
+  function loadLocal(viaObj, imgFile){
+    const imgs = normalizeVIA(viaObj);
+    if(imgs.length === 0) { alert('No VIA images found'); return; }
+    const chosen = imgs[0];
+    const imgUrl = URL.createObjectURL(imgFile);
+    const fr = new Image();
+    fr.onload = function(){
+      els.img.src = imgUrl; els.img.onload = null;
+      render({ imgUrl: imgUrl, imgNatural: { width: fr.naturalWidth, height: fr.naturalHeight }, regions: chosen.regions || [] });
+    };
+    fr.onerror = function(){ alert('Image failed to load'); };
+    fr.src = imgUrl;
+  }
+
+  // Wire UI
+  els.loadBtn.addEventListener('click', function(){
+    const via = (els.viaUrl.value||'').trim();
+    const img = (els.imgUrl.value||'').trim();
+    if(!via){ alert('Enter a VIA JSON URL (or use local files below).'); return; }
+    loadFromUrls(via, img).catch(function(err){ alert(err.message); });
+  });
+
+  // Local loaders
+  els.viaFile.addEventListener('change', function(){
+    const file = els.viaFile.files[0]; if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(){
+      try { const obj = JSON.parse(reader.result); if(els.imgFile.files[0]) loadLocal(obj, els.imgFile.files[0]); }
+      catch(e){ alert('Could not parse JSON: ' + e.message); }
+    };
+    reader.readAsText(file);
+  });
+  els.imgFile.addEventListener('change', function(){
+    const jsonFile = els.viaFile.files[0]; if(!jsonFile){ alert('Select a VIA JSON file first.'); return; }
+    const reader = new FileReader();
+    reader.onload = function(){
+      try { const obj = JSON.parse(reader.result); loadLocal(obj, els.imgFile.files[0]); }
+      catch(e){ alert('Could not parse JSON: ' + e.message); }
+    };
+    reader.readAsText(jsonFile);
+  });
+
+  // Auto-load if params provided
+  if(viaParam){ loadFromUrls(viaParam, imgParam).catch(function(err){ console.warn(err); }); }
+});
+</script>
+</body>
+</html>
